@@ -200,12 +200,7 @@ describe('User Profile Management', function() {
   });
 });
 ```
-### Testing Flow
-These tests cover the core functionalities of the Mynthra platform. To run them, ensure that:
 
-The testing framework (e.g., Mocha) is installed.
-Page objects (e.g., registrationPage.js, loginPage.js) correctly implement methods like open(), submitForm(), etc.
-Use a test framework like WebDriverIO for browser interactions.
 
    
 
