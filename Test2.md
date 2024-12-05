@@ -63,18 +63,20 @@ describe('User Login', function() {
 });
 ```
 
-Feature: Product Catalog Browsing
-Scenario: User browses products successfully
-Given:
+# Feature: Product Catalog Browsing
+
+## Scenario: User browses products successfully
+
+### Given:
 The user is on the product catalog page.
 
-When:
+### When:
 The user searches for a product category (e.g., "shoes").
 
-Then:
+### Then:
 Relevant products should be displayed based on the search criteria.
 
-Chai.js Code:
+### Chai.js Code:
 ```javascript
 const chai = require('chai');
 const expect = chai.expect;
