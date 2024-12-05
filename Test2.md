@@ -92,7 +92,33 @@ describe('Product Catalog Browsing', function() {
 });
 ```
 
+# Feature: Shopping Cart Management
+## Scenario: User adds a product to the cart
+### Given:
+The user is on a product detail page.
 
+### When:
+The user clicks "Add to Cart".
+
+### Then:
+The product should be added to the shopping cart.
+
+### Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const productPage = require('../pages/productPage');
+const cartPage = require('../pages/cartPage');
+
+describe('Shopping Cart Management', function() {
+  it('should add product to the cart', function() {
+    productPage.openProduct('123'); // Assume '123' is the product ID
+    productPage.addToCart();
+    cartPage.open();
+    expect(cartPage.getCartItems()).to.include('Running Shoes');
+  });
+});
+```
 
 
 
