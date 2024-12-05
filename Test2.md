@@ -149,6 +149,31 @@ describe('Order Placement', function() {
 ```
 
 
+# Feature: Order Tracking
+## Scenario: User checks the status of an order
+### Given:
+The user has placed an order.
+
+### When:
+The user navigates to the order tracking page.
+
+### Then:
+The current order status should be displayed.
+
+### Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const trackingPage = require('../pages/trackingPage');
+
+describe('Order Tracking', function() {
+  it('should display the correct order status', function() {
+    trackingPage.open();
+    trackingPage.enterOrderID('ORD123456');
+    expect(trackingPage.getOrderStatus()).to.equal('Shipped');
+  });
+});
+```
 
    
 
