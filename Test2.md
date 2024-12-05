@@ -30,6 +30,40 @@ describe('User Registration', function() {
 });
 ```
 
+# Feature: User Login
+
+## Scenario: User logs in with valid credentials
+
+### Given:
+
+
+The user is on the login page.
+
+### When:
+The user enters valid credentials (email, password).
+
+### Then:
+The user should be successfully logged in.  
+The user should be redirected to the dashboard.
+
+## Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const loginPage = require('../pages/loginPage');
+
+describe('User Login', function() {
+  it('should login user successfully', function() {
+    loginPage.open();
+    loginPage.enterCredentials('jane@example.com', 'securePassword123');
+    loginPage.submitLogin();
+    expect(loginPage.getWelcomeMessage()).to.include('Welcome, Jane Doe');
+    expect(browser.getUrl()).to.include('/dashboard');
+  });
+});
+```
+
+
 
 
    
