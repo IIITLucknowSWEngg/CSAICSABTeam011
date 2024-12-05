@@ -120,6 +120,33 @@ describe('Shopping Cart Management', function() {
 });
 ```
 
+# Feature: Order Placement
+## Scenario: User places an order successfully
+### Given:
+The user has products in the shopping cart.
+
+### When:
+The user proceeds to checkout and completes payment.
+
+### Then:
+The order should be placed successfully, and a confirmation message displayed.
+
+### Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const checkoutPage = require('../pages/checkoutPage');
+
+describe('Order Placement', function() {
+  it('should place an order successfully', function() {
+    checkoutPage.open();
+    checkoutPage.enterShippingDetails('123 Main St', 'City', '123456');
+    checkoutPage.selectPaymentMethod('Credit Card');
+    checkoutPage.submitOrder();
+    expect(checkoutPage.getConfirmationMessage()).to.equal('Order placed successfully');
+  });
+});
+```
 
 
 
