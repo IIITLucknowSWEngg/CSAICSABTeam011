@@ -1,5 +1,5 @@
 
-# Feature: User Registration
+# Feature: User Registration in APP
 
 ## Scenario: User registers successfully
 
