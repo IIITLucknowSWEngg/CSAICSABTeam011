@@ -1,6 +1,6 @@
 This document outlines the testing process, including test cases, types of testing performed, and instructions for running the test suite for the Mynthra e-commerce platform.
 
-1. Testing Overview
+## 1. Testing Overview
    
 The testing strategy for the Mynthra e-commerce platform is designed to ensure that the system is reliable, functional, and user-friendly across its core features. Each type of testing targets a specific aspect of the platform to identify and fix issues before deployment, ensuring a seamless experience for users. Below is an in-depth explanation of each testing type included in the strategy:
 
@@ -80,7 +80,7 @@ BrowserStack for cross-device testing.
 Lighthouse for assessing usability and accessibility metrics.
 
 
-2. Testing Environment
+## 2. Testing Environment
 
    
 The testing environment specifies the technologies, tools, and configurations used for developing and validating the functionality of the Mynthra platform. Ensuring a proper testing environment is critical for detecting and resolving issues effectively. Here's a detailed explanation of each component:
