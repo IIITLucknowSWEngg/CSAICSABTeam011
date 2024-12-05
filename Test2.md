@@ -63,6 +63,35 @@ describe('User Login', function() {
 });
 ```
 
+Feature: Product Catalog Browsing
+Scenario: User browses products successfully
+Given:
+The user is on the product catalog page.
+
+When:
+The user searches for a product category (e.g., "shoes").
+
+Then:
+Relevant products should be displayed based on the search criteria.
+
+Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const productPage = require('../pages/productPage');
+
+describe('Product Catalog Browsing', function() {
+  it('should display products based on search', function() {
+    productPage.open();
+    productPage.searchProduct('shoes');
+    expect(productPage.getSearchResults()).to.not.be.empty;
+    expect(productPage.getSearchResultsTitles()).to.include('Running Shoes');
+  });
+});
+```
+
+
+
 
 
 
