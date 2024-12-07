@@ -1,3 +1,6 @@
+#Use Case Diagram Code
+
+```plantuml
 @startuml
 
 left to right direction
@@ -31,3 +34,4 @@ A --> UC8 : "Add, edit, or remove products"
 A --> UC9 : "View and manage customer orders"
 
 @enduml
+```
