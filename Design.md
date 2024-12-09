@@ -85,3 +85,62 @@ The UI follows a **mobile-first approach** to ensure a seamless user experience 
 - **Payment Gateway**: Options to pay via UPI, card, or wallet.  
 
 ---
+
+## 6. API Design
+APIs enable the frontend to communicate with the backend microservices. Here are some key endpoints:
+
+### **User Service**
+| **Endpoint** | **Method** | **Description** |
+|--------------|------------|------------------|
+| `/api/user/register` | POST | Register a new user. |
+| `/api/user/login` | POST | Log in an existing user. |
+| `/api/user/profile` | GET | Get user profile details. |
+
+### **Product Service**
+| **Endpoint** | **Method** | **Description** |
+|--------------|------------|------------------|
+| `/api/products` | GET | Fetch all products. |
+| `/api/products/{id}` | GET | Get product details by ID. |
+| `/api/products/search` | GET | Search for products by name, category, or filters. |
+
+### **Order Service**
+| **Endpoint** | **Method** | **Description** |
+|--------------|------------|------------------|
+| `/api/cart` | GET | Get the current cart. |
+| `/api/cart/add` | POST | Add a product to the cart. |
+| `/api/cart/remove` | POST | Remove a product from the cart. |
+| `/api/order` | POST | Place an order. |
+
+---
+
+## 7. Database Design
+The following schema highlights the key database tables and collections.
+
+### **1. PostgreSQL**
+- **Users Table**  
+  | **Field**      | **Data Type** | **Description**         |
+  |----------------|---------------|-------------------------|
+  | `user_id`      | INT (PK)      | Unique identifier for each user. |
+  | `email`        | VARCHAR(255)  | User's email address.  |
+  | `password`     | VARCHAR(255)  | Hashed user password.   |
+  | `role`         | ENUM('admin', 'user') | Role of the user.     |
+
+- **Orders Table**  
+  | **Field**      | **Data Type** | **Description**         |
+  |----------------|---------------|-------------------------|
+  | `order_id`     | INT (PK)      | Unique identifier for each order. |
+  | `user_id`      | INT (FK)      | Reference to the user who placed the order. |
+  | `total_price`  | DECIMAL(10,2) | Total cost of the order. |
+  | `status`       | ENUM('pending', 'shipped', 'delivered') | Order status.  |
+
+### **2. MongoDB**
+- **Products Collection**  
+  ```json
+  {
+    "product_id": "P123",
+    "name": "Men's T-shirt",
+    "description": "100% cotton t-shirt",
+    "price": 999.99,
+    "stock": 50,
+    "category": "Men's Wear"
+  }
