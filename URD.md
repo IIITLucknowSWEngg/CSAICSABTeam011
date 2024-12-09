@@ -1,9 +1,8 @@
-# User Requirements Document (URD) - Myntra Clone
-
+# User Requirements Document (URD)
 
 ## Overview
 
-This document outlines the user requirements for a Myntra clone, an e-commerce platform designed to provide a seamless shopping experience for fashion lovers. The platform will cater to diverse user personas, including fashion enthusiasts, budget-conscious shoppers, sellers, and admins, ensuring intuitive browsing, filtering, and order placement features. The focus is on delivering an efficient, user-friendly interface for exploring, selecting, and purchasing fashion products while allowing users to manage their accounts, wishlists, and order tracking. 
+This document outlines the user requirements for a Myntra clone, an e-commerce platform designed to provide a seamless shopping experience for fashion lovers. The platform will cater to three main user personas: shoppers, a single seller, and admins, ensuring intuitive browsing, filtering, and order placement features. The focus is on delivering an efficient, user-friendly interface for exploring, selecting, and purchasing fashion products while allowing users to manage their accounts, wishlists, and order tracking. The platform will support only **one seller** who will provide all the products listed for sale. 
 
 ---
 
@@ -24,7 +23,7 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 - **Age**: 25  
 - **Occupation**: Marketing Executive  
 - **Tech Skills**: Moderate  
-- **Needs**: Wants a simple, visually appealing platform to explore the latest fashion trends and make quick purchases. Meera prefers a smooth and easy-to-navigate user experience.
+- **Needs**: Wants a simple, visually appealing platform to explore the latest fashion trends and make quick purchases. Meera prefers mobile shopping and relies on a smooth and easy-to-navigate user experience.
 
 ### Persona 2: Budget-Conscious Shopper
 - **Name**: Rahul  
@@ -33,19 +32,19 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 - **Tech Skills**: High  
 - **Needs**: Looks for discounts and budget-friendly products. Rahul frequently filters products by price and uses coupons during checkout.
 
-### Persona 3: Seller
+### Persona 3: Seller (Single Vendor)
 - **Name**: Priya  
 - **Age**: 35  
 - **Occupation**: Boutique Owner  
 - **Tech Skills**: Low  
-- **Needs**: Wants an easy way to upload new products, manage inventory, and track orders. Priya prefers a simple dashboard where she can monitor sales and customer reviews.
+- **Needs**: As the sole seller on the platform, Priya needs a straightforward way to upload new products, manage inventory, track orders, and monitor product performance. Priya relies on a simple dashboard to view sales and customer feedback.
 
 ### Persona 4: Admin
 - **Name**: Arjun  
 - **Age**: 40  
 - **Occupation**: E-commerce Manager  
 - **Tech Skills**: High  
-- **Needs**: Requires a comprehensive platform to monitor overall performance, manage sellers, handle shopper complaints, and oversee website functionality. Arjun relies on analytics to make decisions about the platform's operations.
+- **Needs**: Requires a comprehensive platform to monitor overall performance, manage shopper interactions, resolve complaints, and oversee website functionality. Arjun also ensures the platform runs smoothly by handling operational tasks.
 
 ---
 
@@ -55,9 +54,9 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 - **User Story 2**: As a shopper, I want to filter products based on size, color, and price so that I can quickly find what I am looking for.
 - **User Story 3**: As a shopper, I want to add multiple items to my shopping cart so that I can purchase them in one go.
 - **User Story 4**: As a shopper, I want to save my favorite products to a wishlist so that I can purchase them later.
-- **User Story 5**: As a seller, I want to easily upload products to the platform so that I can showcase my inventory to potential shoppers.
+- **User Story 5**: As a seller, I want to upload new products to the platform so that I can showcase my inventory to shoppers.
 - **User Story 6**: As a seller, I want to track my product sales and inventory so that I can manage my stock effectively.
-- **User Story 7**: As an admin, I want to monitor and manage user activity on the platform so that I can ensure smooth operations and a positive experience for both shoppers and sellers.
+- **User Story 7**: As an admin, I want to monitor and manage shopper activity on the platform so that I can ensure smooth operations and a positive experience for shoppers.
 - **User Story 8**: As an admin, I want to resolve shopper complaints and issues with orders so that the platform maintains a good reputation.
 
 ---
@@ -79,8 +78,8 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 
 ### **Use Case 2: Seller Product Upload**
 - **Actors**: Seller  
-- **Goal**: Allow sellers to upload new products to the platform.  
-- **Precondition**: Seller must have a registered account and be logged in.  
+- **Goal**: Allow the seller to upload new products to the platform.  
+- **Precondition**: The seller must have a registered account and be logged in.  
 - **Basic Flow**:  
   1. Seller navigates to the product upload page.  
   2. Seller fills in the product details (name, category, price, stock, images).  
@@ -105,17 +104,17 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 
 ## 8. Assumptions and Dependencies
 
-- Shoppers, sellers, and admins will have internet access and devices that support a modern web browser.
+- Shoppers, the seller, and admins will have internet access and devices that support a modern web browser.
 - The platform will integrate with third-party payment gateways for order processing.
-- Product availability and inventory will depend on data provided by sellers.
+- Product availability and inventory will be managed by the single seller and updated accordingly.
 
 ---
 
 ## 9. Glossary
 
 - **Shopper**: A user who visits the platform to browse or purchase products.
-- **Seller**: A user who lists and manages products for sale on the platform.
-- **Admin**: A user responsible for managing the platform, including overseeing shopper and seller activities, handling complaints, and ensuring the platform's smooth operation.
+- **Seller**: A single vendor or boutique that provides all the products listed for sale on the platform.
+- **Admin**: A user responsible for managing the platform, including overseeing shopper activities, handling complaints, and ensuring smooth operations.
 - **Cart**: A feature where shoppers can store products they intend to purchase.
 - **Wishlist**: A feature allowing shoppers to save products for future purchases.
 - **Checkout**: The process of completing a purchase, including payment and delivery details.
