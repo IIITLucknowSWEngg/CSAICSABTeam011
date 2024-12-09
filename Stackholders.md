@@ -32,4 +32,4 @@ External stakeholders include the shoppers, vendors, logistics partners, and pay
 | **Vendors**                    | Provide products and manage listings                                  | Uploading product details, managing stock, pricing, and promotions                  | High - Drives product variety and availability   |
 | **Logistics Partners**         | Handle order fulfillment and shipping                                 | Managing shipments, tracking, and delivery statuses                                 | Medium - Affects user satisfaction               |
 | **Payment Gateway Providers**  | Facilitate online payment transactions                               | Ensuring secure and reliable payment processing                                     | Medium - Crucial for trust and seamless payments |
-| **Shoppers (Shippers)**  | Manages product distribution chain                              |Tracking lost items crucial                                     | --- |
+| **Shippers**  | Manages product distribution chain                              |Tracking lost items crucial                                     | --- |
