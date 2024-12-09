@@ -45,6 +45,13 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 - **Occupation**: E-commerce Manager  
 - **Tech Skills**: High  
 - **Needs**: Requires a comprehensive platform to monitor overall performance, manage shopper interactions, resolve complaints, and oversee website functionality. Arjun also ensures the platform runs smoothly by handling operational tasks.
+  
+### Persona 5: Shipper
+- **Name**: Ravi  
+- **Age**: 32  
+- **Occupation**: Logistics Manager  
+- **Tech Skills**: Moderate  
+- **Needs**: Ravi needs an efficient system to manage and track shipments. He requires notifications for new orders and updates on delivery status, along with tools to handle customer complaints related to shipping and delays.
 
 ---
 
@@ -58,6 +65,8 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 - **User Story 6**: As a seller, I want to track my product sales and inventory so that I can manage my stock effectively.
 - **User Story 7**: As an admin, I want to monitor and manage shopper activity on the platform so that I can ensure smooth operations and a positive experience for shoppers.
 - **User Story 8**: As an admin, I want to resolve shopper complaints and issues with orders so that the platform maintains a good reputation.
+- **User Story 9**: As a shipper, I want to receive notifications for new orders and updates on delivery status so that I can manage shipments effectively.
+- **User Story 10**: As a shipper, I want to handle customer complaints related to shipping and delays so that the delivery process is smooth and efficient.
 
 ---
 
@@ -100,11 +109,24 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 - **Postcondition**: Shopper receives a resolution, and the complaint is marked as resolved.  
 - **Exceptions**: If the complaint cannot be resolved, the admin may escalate the issue for further investigation.
 
+### **Use Case 4: Shipper Tracks Shipments**
+- **Actors**: Shipper  
+- **Goal**: Enable the shipper to track the status of orders and handle shipping-related issues.  
+- **Precondition**: Shipper must be logged in and assigned to manage specific shipments.  
+- **Basic Flow**:  
+  1. Shipper receives notification of a new order.  
+  2. Shipper tracks the shipment progress and updates the status as necessary.  
+  3. Shipper notifies the customer about shipping delays or issues.  
+  4. Shipper handles customer complaints related to shipping.  
+- **Postcondition**: Shipment is delivered, and any shipping issues are resolved.  
+- **Exceptions**: If there are delays, the system prompts the shipper to notify the shopper.
+
+---
 ---
 
 ## 8. Assumptions and Dependencies
 
-- Shoppers, the seller, and admins will have internet access and devices that support a modern web browser.
+- Shoppers, the seller, shippers and admins will have internet access and devices that support a modern web browser.
 - The platform will integrate with third-party payment gateways for order processing.
 - Product availability and inventory will be managed by the single seller and updated accordingly.
 
@@ -115,6 +137,7 @@ This document outlines the user requirements for a Myntra clone, an e-commerce p
 - **Shopper**: A user who visits the platform to browse or purchase products.
 - **Seller**: A single vendor or boutique that provides all the products listed for sale on the platform.
 - **Admin**: A user responsible for managing the platform, including overseeing shopper activities, handling complaints, and ensuring smooth operations.
+- **Shipper**: A logistics manager responsible for managing and tracking shipments, handling complaints, and ensuring timely delivery.
 - **Cart**: A feature where shoppers can store products they intend to purchase.
 - **Wishlist**: A feature allowing shoppers to save products for future purchases.
 - **Checkout**: The process of completing a purchase, including payment and delivery details.
