@@ -3,8 +3,8 @@
 ```plantuml
 @startuml
 ' External Actors
-actor "Customer (User)" as Customer
-actor "Seller (User)" as Seller
+actor "Shopper(User)" as Customer
+actor "Vendor" as Seller
 actor "Admin" as Admin
 actor "Payment Gateway" as PaymentGateway
 actor "Logistics Service" as LogisticsService
@@ -12,7 +12,7 @@ actor "Notification Service" as NotificationService
 actor "Customer Support" as CustomerSupport
 
 ' System Boundary: Mynthra Clone
-package "Mynthra Clone" {
+package "Mynthra" {
 
     ' Subsystems
     rectangle "User Registration \nand Authentication" as Registration
@@ -66,7 +66,7 @@ ChatSupport --> CustomerSupport : Handle User Issues
 !define RECTANGLE rectangle
 !define BOLD **<color:Black>**
 
-title Container Diagram - Myntra Clone (Seller)
+title Container Diagram - Myntra (Vendor)
 
 ' Add primary containers for Seller section
 RECTANGLE "Seller Web Interface" as sellerWebInterface <<Web Application>> #lightblue
@@ -82,7 +82,7 @@ RECTANGLE "Payment Gateway" as paymentSystem <<External System>> #pink
 RECTANGLE "Logistics Service" as logisticsService <<External System>> #pink
 RECTANGLE "Push Notification Service" as pushNotification <<External System>> #pink
 
-' Relationships for Seller
+' Relationships for Vendors
 sellerWebInterface --> sellerGateway : "API Calls"
 sellerGateway --> productDB : "Manage Product Data"
 sellerGateway --> orderDB : "Manage Order Data"
@@ -99,9 +99,9 @@ sellerGateway --> pushNotification : "Send Notifications"
 !define RECTANGLE rectangle
 !define BOLD **<color:Black>**
 
-title Container Diagram - Myntra Clone (Customer)
+title Container Diagram - Myntra (Shopper)
 
-' Add primary containers for Customer section
+' Add primary containers for Shopper section
 RECTANGLE "Customer Mobile App" as mobileApp <<Mobile Application>> #lightblue
 RECTANGLE "Customer Web App" as webApp <<Web Application>> #lightblue
 RECTANGLE "Customer API Gateway" as customerGateway <<API Gateway>> #lightblue
@@ -112,12 +112,12 @@ RECTANGLE "Order Database" as orderDB <<Database>> #lightyellow
 RECTANGLE "User Database" as userDB <<Database>> #lightyellow
 RECTANGLE "Payment Database" as paymentDB <<Database>> #lightyellow
 
-' External systems shared with Customer
+' External systems shared with Shoppers
 RECTANGLE "Payment Gateway" as paymentSystem <<External System>> #pink
 RECTANGLE "Logistics Service" as logisticsService <<External System>> #pink
 RECTANGLE "Push Notification Service" as pushNotification <<External System>> #pink
 
-' Relationships for Customer
+' Relationships for Shoppers
 mobileApp --> customerGateway : "API Calls"
 webApp --> customerGateway : "API Calls"
 customerGateway --> productDB : "Browse Product Data"
@@ -135,7 +135,7 @@ customerGateway --> pushNotification : "Receive Push Notifications"
 !define RECTANGLE rectangle
 !define BOLD **<color:Black>**
 
-title Container Diagram - Myntra Clone (Admin)
+title Container Diagram - Myntra (Admin)
 
 ' Add primary containers for Admin section
 RECTANGLE "Admin Web Portal" as adminPortal <<Web Application>> #lightcoral
