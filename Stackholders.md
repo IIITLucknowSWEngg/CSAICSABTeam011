@@ -1,7 +1,14 @@
 # Stakeholders
 
-## Overview
-This document outlines the key stakeholders involved in the Myntra clone project. Stakeholders include all individuals, groups, and organizations that are affected by the project or have an interest in its success.
+## Overview  
+
+The success of project relies on the collaborative efforts of diverse stakeholders, both internal and external, who play crucial roles throughout the development and operational lifecycle.  
+
+### **Internal Stakeholders**  
+Internal stakeholders consist of the teams and individuals directly involved in managing, designing, developing, and ensuring the platform's overall quality and compliance. They are responsible for translating business goals into a functional product, maintaining operational stability, and driving marketing efforts to maximize user engagement.  
+
+### **External Stakeholders**  
+External stakeholders include the shoppers, vendors, logistics partners, and payment gateway providers, who interact with the platform either as customers or service contributors. Their participation and feedback directly influence the platform's usability, reliability, and scalability, ultimately determining its success in the market.  
 
 ## Internal Stakeholders 
 
@@ -25,3 +32,4 @@ This document outlines the key stakeholders involved in the Myntra clone project
 | **Vendors**                    | Provide products and manage listings                                  | Uploading product details, managing stock, pricing, and promotions                  | High - Drives product variety and availability   |
 | **Logistics Partners**         | Handle order fulfillment and shipping                                 | Managing shipments, tracking, and delivery statuses                                 | Medium - Affects user satisfaction               |
 | **Payment Gateway Providers**  | Facilitate online payment transactions                               | Ensuring secure and reliable payment processing                                     | Medium - Crucial for trust and seamless payments |
+| **Shoppers (Shippers)**  | Manages product distribution chain                              |Tracking lost items crucial                                     | --- |
