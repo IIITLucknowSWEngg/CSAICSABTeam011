@@ -1,137 +1,121 @@
-# User Requirements Document (URD)
+# User Requirements Document (URD) - Myntra Clone
 
-## 1. Introduction
 
-### 1.1 Purpose
-This document outlines the user requirements for **Mynthra**, an e-commerce platform. It serves to guide the design, development, and testing processes to ensure that the platform meets the needs of its users, including customers, sellers, and administrators.
+## Overview
 
-### 1.2 Scope
-**Mynthra** will be an online marketplace where customers can purchase a wide range of products from various sellers. The platform will support product browsing, order placement, payment processing, real-time order tracking, and customer-seller communication. The platform will also provide sellers with tools to manage their product listings, track sales, and handle orders.
+This document outlines the user requirements for a Myntra clone, an e-commerce platform designed to provide a seamless shopping experience for fashion lovers. The platform will cater to diverse user personas, including fashion enthusiasts, budget-conscious shoppers, sellers, and admins, ensuring intuitive browsing, filtering, and order placement features. The focus is on delivering an efficient, user-friendly interface for exploring, selecting, and purchasing fashion products while allowing users to manage their accounts, wishlists, and order tracking. 
 
-### 1.3 Definitions, Acronyms, and Abbreviations
-- **Customer**: A user who uses the platform to browse and purchase products.
-- **Seller**: A user who lists and sells products on the platform.
-- **Admin**: The entity responsible for managing and overseeing the platform’s operations.
-- **SKU**: Stock Keeping Unit, a unique identifier for each product.
-- **OTP**: One-Time Password, used for secure login and verification.
+---
 
-### 1.4 References
-- Stakeholders.md
-- ProjectPlan.md
+## Table of Contents
 
-## 2. User Characteristics
+1. [User Personas](#user-personas)  
+2. [User Stories](#user-stories)  
+3. [Use Cases](#use-cases)  
+4. [Assumptions and Dependencies](#assumptions-and-dependencies)  
+5. [Glossary](#glossary)  
 
-### 2.1 Customers
-- Typically individuals who are familiar with basic app or web navigation.
-- Expect an easy-to-use interface for searching, browsing, and purchasing products.
-- Value secure transactions, fast shipping, and detailed product descriptions.
+---
 
-### 2.2 Sellers
-- Generally small to medium business owners who seek an easy-to-manage platform for selling products.
-- Need intuitive tools for managing product listings, tracking orders, and analyzing sales performance.
-- Expect secure and timely payouts for their sales.
+## 5. User Personas
 
-### 2.3 Administrators
-- Responsible for overseeing the platform’s operations, managing user accounts, and ensuring compliance with policies.
-- Require tools for monitoring marketplace activities, resolving disputes, and handling customer support.
+### Persona 1: Fashion Enthusiast (Shopper)
+- **Name**: Meera  
+- **Age**: 25  
+- **Occupation**: Marketing Executive  
+- **Tech Skills**: Moderate  
+- **Needs**: Wants a simple, visually appealing platform to explore the latest fashion trends and make quick purchases. Meera prefers a smooth and easy-to-navigate user experience.
 
-## 3. Functional Requirements
+### Persona 2: Budget-Conscious Shopper
+- **Name**: Rahul  
+- **Age**: 30  
+- **Occupation**: Engineer  
+- **Tech Skills**: High  
+- **Needs**: Looks for discounts and budget-friendly products. Rahul frequently filters products by price and uses coupons during checkout.
 
-### 3.1 User Registration and Login
-**Customers and Sellers**:
-- Must be able to register using email or phone number.
-- Must be able to log in using their credentials (email/phone and password).
-- Two-factor authentication (OTP or email verification) should be available for added security.
+### Persona 3: Seller
+- **Name**: Priya  
+- **Age**: 35  
+- **Occupation**: Boutique Owner  
+- **Tech Skills**: Low  
+- **Needs**: Wants an easy way to upload new products, manage inventory, and track orders. Priya prefers a simple dashboard where she can monitor sales and customer reviews.
 
-### 3.2 User Profiles
-**Customers**:
-- Must be able to create and edit their profile, including contact information and payment methods.
-- Must be able to view their order history and delivery tracking.
+### Persona 4: Admin
+- **Name**: Arjun  
+- **Age**: 40  
+- **Occupation**: E-commerce Manager  
+- **Tech Skills**: High  
+- **Needs**: Requires a comprehensive platform to monitor overall performance, manage sellers, handle shopper complaints, and oversee website functionality. Arjun relies on analytics to make decisions about the platform's operations.
 
-**Sellers**:
-- Must be able to create and edit their profile, including business information and bank details for payouts.
-- Must be able to manage product listings (add, edit, and remove products).
-- Must be able to track orders, sales performance, and customer reviews.
+---
 
-### 3.3 Product Browsing and Search
-**Customers**:
-- Must be able to browse products by categories or use a search function to find specific items.
-- Must be able to apply filters (price, brand, ratings, etc.) to narrow down product search results.
-- Must be able to view detailed product descriptions, images, and customer reviews.
+## 6. User Stories
 
-### 3.4 Shopping Cart and Checkout
-**Customers**:
-- Must be able to add products to a shopping cart for later purchase.
-- Must be able to view the total cost, including taxes and shipping, before completing a purchase.
-- Must be able to save multiple shipping addresses and choose one during checkout.
+- **User Story 1**: As a shopper, I want to browse through a variety of clothing categories so that I can find items that suit my taste and needs.
+- **User Story 2**: As a shopper, I want to filter products based on size, color, and price so that I can quickly find what I am looking for.
+- **User Story 3**: As a shopper, I want to add multiple items to my shopping cart so that I can purchase them in one go.
+- **User Story 4**: As a shopper, I want to save my favorite products to a wishlist so that I can purchase them later.
+- **User Story 5**: As a seller, I want to easily upload products to the platform so that I can showcase my inventory to potential shoppers.
+- **User Story 6**: As a seller, I want to track my product sales and inventory so that I can manage my stock effectively.
+- **User Story 7**: As an admin, I want to monitor and manage user activity on the platform so that I can ensure smooth operations and a positive experience for both shoppers and sellers.
+- **User Story 8**: As an admin, I want to resolve shopper complaints and issues with orders so that the platform maintains a good reputation.
 
-### 3.5 Payment Processing
-**Customers**:
-- Must be able to choose from multiple payment methods (credit/debit card, UPI, net banking, in-app wallet).
-- Must receive payment confirmation and an invoice via email or SMS after the purchase is completed.
+---
 
-**Sellers**:
-- Must be able to track earnings and sales history.
-- Must receive payments directly to their chosen payout method.
+## 7. Use Cases
 
-### 3.6 Order Tracking and Notifications
-**Customers**:
-- Must receive notifications for order placement, shipment, and delivery.
-- Must be able to track orders in real-time, including shipment status and estimated delivery date.
+### **Use Case 1: Shopper Registration**
+- **Actors**: Shopper  
+- **Goal**: Enable a shopper to create an account on the platform.  
+- **Precondition**: The shopper must have a valid email address or phone number.  
+- **Basic Flow**:  
+  1. Shopper navigates to the registration page.  
+  2. Shopper fills in their name, email/phone number, and password.  
+  3. Shopper submits the registration form.  
+  4. The system sends a verification email/SMS.  
+  5. Shopper verifies their email/phone, and the account is created.  
+- **Postcondition**: Shopper can log in and access the platform's features.  
+- **Exceptions**: If the shopper’s email/phone is already registered, an error message is displayed.
 
-**Sellers**:
-- Must receive notifications for new orders, cancellations, and refunds.
-- Must be able to update order status (processing, shipped, delivered) within the platform.
+### **Use Case 2: Seller Product Upload**
+- **Actors**: Seller  
+- **Goal**: Allow sellers to upload new products to the platform.  
+- **Precondition**: Seller must have a registered account and be logged in.  
+- **Basic Flow**:  
+  1. Seller navigates to the product upload page.  
+  2. Seller fills in the product details (name, category, price, stock, images).  
+  3. Seller submits the product listing.  
+  4. The system verifies the details and lists the product in the appropriate category.  
+- **Postcondition**: The product is available for shoppers to browse and purchase.  
+- **Exceptions**: If required details are missing, the system prompts the seller to complete the information.
 
-### 3.7 Ratings and Reviews
-**Customers**:
-- Must be able to rate products and provide reviews based on their purchase experience.
+### **Use Case 3: Admin Resolves Complaint**
+- **Actors**: Admin  
+- **Goal**: Enable the admin to resolve shopper complaints regarding orders or platform usage.  
+- **Precondition**: Admin must be logged in with appropriate privileges.  
+- **Basic Flow**:  
+  1. Admin navigates to the complaints section.  
+  2. Admin reviews the complaint details (shopper ID, order ID, issue).  
+  3. Admin contacts the seller or takes necessary action to resolve the issue.  
+  4. Admin updates the complaint status.  
+- **Postcondition**: Shopper receives a resolution, and the complaint is marked as resolved.  
+- **Exceptions**: If the complaint cannot be resolved, the admin may escalate the issue for further investigation.
 
-**Sellers**:
-- Must be able to view ratings and reviews for their products.
+---
 
-### 3.8 Customer Support
-**Customers and Sellers**:
-- Must have access to customer support via live chat, email, or phone.
-- Frequently asked questions (FAQs) and help sections should be accessible within the platform.
+## 8. Assumptions and Dependencies
 
-### 3.9 Admin Panel
-**Admins**:
-- Must be able to manage user accounts (approve, suspend, or delete users).
-- Must have access to view sales data, user activity logs, and customer disputes.
-- Must be able to resolve disputes between customers and sellers.
+- Shoppers, sellers, and admins will have internet access and devices that support a modern web browser.
+- The platform will integrate with third-party payment gateways for order processing.
+- Product availability and inventory will depend on data provided by sellers.
 
-## 4. Non-Functional Requirements
+---
 
-### 4.1 Performance
-- The platform must load within 3 seconds under normal network conditions.
-- Order processing and real-time updates must be quick and efficient.
+## 9. Glossary
 
-### 4.2 Security
-- User data must be encrypted at all stages (in transit and at rest).
-- The platform must comply with data protection regulations, such as GDPR.
-- Secure payment gateways must be integrated to prevent fraudulent activities.
-
-### 4.3 Usability
-- The platform’s user interface must be intuitive and responsive across various devices (desktop, tablet, mobile).
-- The checkout process should be simple, requiring minimal user input.
-
-### 4.4 Reliability
-- The platform must ensure 99.9% uptime to minimize disruptions.
-- Backup systems must ensure that no data is lost in the event of a server failure.
-
-### 4.5 Scalability
-- The platform must support an increasing number of users without performance degradation.
-- The backend system should be designed to handle additional features and modules in the future.
-
-## 5. Assumptions and Dependencies
-- The platform will rely on third-party services for payment processing, shipping integrations, and notifications.
-- Users will have access to a stable internet connection and modern web browsers or smartphones.
-
-## 6. Acceptance Criteria
-- The platform must pass all functional and non-functional tests.
-- User feedback during beta testing must be addressed before the final release.
-- The platform must meet all security, performance, and usability benchmarks.
-
-## 7. Conclusion
-This document defines the user requirements for **Mynthra**, ensuring that the platform meets the needs of its users—customers, sellers, and administrators. It serves as a comprehensive guide for the development team to follow during the design and implementation phases of the project.
+- **Shopper**: A user who visits the platform to browse or purchase products.
+- **Seller**: A user who lists and manages products for sale on the platform.
+- **Admin**: A user responsible for managing the platform, including overseeing shopper and seller activities, handling complaints, and ensuring the platform's smooth operation.
+- **Cart**: A feature where shoppers can store products they intend to purchase.
+- **Wishlist**: A feature allowing shoppers to save products for future purchases.
+- **Checkout**: The process of completing a purchase, including payment and delivery details.
