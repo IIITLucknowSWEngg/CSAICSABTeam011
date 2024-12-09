@@ -53,3 +53,35 @@ The following principles guide the development and design of Myntra 2.0:
 - **Performance**: Use of Redis caching, load balancers, and optimized database queries.  
 - **Responsiveness**: A mobile-first approach for a smooth, fast experience on all devices.  
 
+---
+
+## 4. Data Flow
+This section outlines how data flows within the system:
+
+1. **User Request**: A user initiates a request from the UI (e.g., viewing a product).  
+2. **API Gateway**: The request is routed through the API Gateway, which directs it to the appropriate service.  
+3. **Microservices**: The specific microservice (e.g., Product Service) processes the request.  
+4. **Database**: The service interacts with the database (PostgreSQL or MongoDB) to retrieve or update information.  
+5. **Response**: The microservice sends a response back through the API Gateway to the user.  
+
+---
+
+## 5. User Interface Design
+The UI follows a **mobile-first approach** to ensure a seamless user experience across devices. Below are the main pages and their components:
+
+### **1. Homepage**
+- **Header**: Search bar, category navigation, and login/cart icons.  
+- **Product Grid**: List of products with images, prices, and "Add to Cart" buttons.  
+- **Footer**: Links to terms, privacy policy, and support.  
+
+### **2. Product Detail Page**
+- **Image Gallery**: Shows multiple views of the product.  
+- **Product Info**: Name, price, size, color, and availability.  
+- **Add to Cart**: Button to add the product to the cart.  
+
+### **3. Cart/Checkout Page**
+- **Product List**: Items in the cart with options to edit quantity or remove.  
+- **Order Summary**: Total cost, taxes, and delivery charges.  
+- **Payment Gateway**: Options to pay via UPI, card, or wallet.  
+
+---
