@@ -1,3 +1,5 @@
+# ucd  Diagram Code
+```plantuml
 @startuml
 left to right direction
 skinparam packageStyle rectangle
@@ -50,3 +52,4 @@ A --> UC14 : "Oversee and manage vendors"
 A --> UC15 : "Monitor and manage all orders"
 A --> UC19 : "Send notifications to users"
 @enduml
+```
