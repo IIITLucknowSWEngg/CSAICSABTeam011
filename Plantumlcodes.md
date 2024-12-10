@@ -173,3 +173,68 @@ Admin --> [Admin Panel]
 @enduml
 
 ```
+#deployement diagram 
+```
+ @startuml
+!define RECTANGLE class
+!define NODE node
+!define COMPONENT component
+
+' Define nodes and components for deployment
+NODE WebServer {
+    COMPONENT WebApplication {
+        [Frontend: React/Next.js]
+    }
+    COMPONENT API {
+        [Backend: Node.js/Express]
+    }
+}
+
+NODE DatabaseServer {
+    COMPONENT Database {
+        [MongoDB/PostgreSQL]
+    }
+}
+
+NODE PaymentService {
+    COMPONENT PaymentGateway {
+        [Razorpay/Stripe API]
+    }
+}
+
+NODE NotificationService {
+    COMPONENT NotificationSystem {
+        [SMS/Email API]
+    }
+}
+
+NODE LogisticsService {
+    COMPONENT LogisticsAPI {
+        [Logistics API]
+    }
+}
+
+NODE MobileApp {
+    COMPONENT MobileClient {
+        [Android/iOS App]
+    }
+}
+
+' Define relationships between nodes and components
+WebApplication --> API : Calls API for data
+API --> Database : Interacts with Database
+API --> PaymentGateway : Processes payments
+API --> NotificationSystem : Sends notifications
+API --> LogisticsAPI : Retrieves logistics info
+
+MobileClient --> WebApplication : Accesses Web Application for UI
+MobileClient --> API : Interacts for data and actions
+
+' Show external connections
+DatabaseServer -[hidden]-> WebServer : Data flow
+PaymentService -[hidden]-> WebServer : Payment processing
+NotificationService -[hidden]-> WebServer : Notification handling
+LogisticsService -[hidden]-> WebServer : Shipment tracking
+
+@enduml
+```
