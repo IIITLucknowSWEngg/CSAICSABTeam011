@@ -13,7 +13,6 @@
 
 
 ## 4. Deployment Diagram
-![Deployment Diagram](https://github.com/IIITLucknowSWEngg/CSAICSABTeam011/blob/main/plantuml%20(1).png)
-
+![Deployment Diagram](https://github.com/IIITLucknowSWEngg/CSAICSABTeam011/blob/main/Screenshot%202024-12-10%20220811.png)
 
 
