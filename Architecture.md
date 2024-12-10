@@ -9,4 +9,6 @@
 
 
 ## 3. Component Diagram
+![component  diagram](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/plantuml.png)
+
 
