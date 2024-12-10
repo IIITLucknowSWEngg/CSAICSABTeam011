@@ -12,3 +12,8 @@
 ![component  diagram](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/plantuml.png)
 
 
+## 4. Deployment Diagram
+![Deployment Diagram](https://github.com/IIITLucknowSWEngg/CSAICSABTeam011/blob/main/plantuml%20(1).png)
+
+
+
