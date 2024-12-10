@@ -101,3 +101,75 @@ Rel(product, queue, "Publishes", "AMQP")
 Rel(order, queue, "Publishes", "AMQP")
 @enduml
 ```
+#component diagram
+
+```
+@startuml
+skinparam componentStyle rectangle
+
+title Component Diagram for Myntra 2.0
+
+' Users and roles
+actor Shopper
+actor Vendor
+actor Admin
+
+' Components
+package "Frontend" {
+    [Shopper UI] <<Component>> 
+    [Vendor Dashboard] <<Component>> 
+    [Admin Panel] <<Component>> 
+}
+
+package "Backend" {
+    [Authentication Service] <<Component>>
+    [Product Catalog Service] <<Component>>
+    [Shopping Cart Service] <<Component>>
+    [Order Management Service] <<Component>>
+    [Payment Processing Service] <<Component>>
+    [Order Tracking Service] <<Component>>
+    [Notification Service] <<Component>>
+    [Ratings and Reviews Service] <<Component>>
+}
+
+package "External Systems" {
+    [Payment Gateway] <<External>>
+    [Logistics API] <<External>>
+    [Email/SMS API] <<External>>
+}
+
+' Relationships
+Shopper --> [Shopper UI]
+Vendor --> [Vendor Dashboard]
+Admin --> [Admin Panel]
+
+[Shopper UI] --> [Authentication Service]
+[Shopper UI] --> [Product Catalog Service]
+[Shopper UI] --> [Shopping Cart Service]
+[Shopper UI] --> [Order Management Service]
+[Shopper UI] --> [Order Tracking Service]
+[Shopper UI] --> [Ratings and Reviews Service]
+
+[Vendor Dashboard] --> [Authentication Service]
+[Vendor Dashboard] --> [Product Catalog Service]
+[Vendor Dashboard] --> [Order Management Service]
+[Vendor Dashboard] --> [Ratings and Reviews Service]
+
+[Admin Panel] --> [Authentication Service]
+[Admin Panel] --> [Product Catalog Service]
+[Admin Panel] --> [Order Management Service]
+[Admin Panel] --> [Notification Service]
+
+[Order Management Service] --> [Payment Processing Service]
+[Order Management Service] --> [Notification Service]
+[Order Management Service] --> [Order Tracking Service]
+
+[Payment Processing Service] --> [Payment Gateway]
+
+[Order Tracking Service] --> [Logistics API]
+
+[Notification Service] --> [Email/SMS API]
+
+@enduml
+
+```
