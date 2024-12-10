@@ -15,7 +15,6 @@ The Mynthra e-commerce platform enables users to browse, purchase, and manage pr
 - API: Application Programming Interface  
 - OTP: One-Time Password  
 - NFR: Non-Functional Requirement  
-- Shipper: A delivery person responsible for transporting orders from vendors to shoppers  
 - Shopper: A person using the platform to browse products, make purchases, and track deliveries  
 - Vendor: A business or individual offering products on the platform
 
@@ -39,24 +38,22 @@ The Mynthra platform is an e-commerce system designed to operate on both mobile 
 - User registration and authentication.  
 - Product catalog management (by vendors).  
 - Shopping cart and order management.  
-- Real-time order tracking and delivery management (by shippers).  
+- Real-time order tracking and delivery management.  
 - Payment processing and history tracking.  
 - Ratings and Reviews.
 
 ### 2.3 User Classes and Characteristics
-- *Shoppers*: Individuals using the platform to browse products, place orders, and track deliveries.  
-- *Vendors*: Businesses managing product listings, orders, and stock availability.  
-- *Shippers*: Individuals responsible for delivering products from vendors to shoppers.  
-- *Admins*: Individuals managing the platform, overseeing user, vendor, and order activities.
-  
+- Shoppers: Individuals using the platform to browse products, place orders, and track deliveries.  
+- Vendors: Businesses managing product listings, orders, and stock availability.  
+- Admins: Individuals managing the platform, overseeing user, vendor, and order activities.
+
 ### 2.4 Operating Environment
 The Mynthra platform will operate on web browsers and mobile applications (Android and iOS). It requires internet connectivity for functionalities such as product browsing, checkout, and order tracking. The backend will be hosted on cloud services for high availability and scalability.
 
-- *Web Browsers*: The platform supports the latest versions of popular web browsers, including Chrome, Firefox, Safari, and Microsoft Edge.
-- *Mobile Applications*:
-  - *Android*: The mobile app will support Android 8.0 (Oreo) and higher versions.
-  - *iOS*: The mobile app will support iOS 12.0 and later versions.
-
+- Web Browsers: The platform supports the latest versions of popular web browsers, including Chrome, Firefox, Safari, and Microsoft Edge.
+- Mobile Applications:
+  - Android: The mobile app will support Android 8.0 (Oreo) and higher versions.
+  - iOS: The mobile app will support iOS 12.0 and later versions.
 
 ### 2.5 Design and Implementation Constraints
 - The platform must comply with data protection laws (e.g., GDPR).
@@ -65,7 +62,7 @@ The Mynthra platform will operate on web browsers and mobile applications (Andro
 - The platform will initially only support one currency (INR) and one language (English).
 
 ### 2.6 Assumptions and Dependencies
-- Shoppers, shippers, and vendors have access to devices with stable internet connections.
+- Shoppers and vendors have access to devices with stable internet connections.
 - Third-party service integrations for payment, logistics, and notifications will be reliable.  
 - The system will initially support domestic transactions only.  
 - The platform assumes that third-party services (e.g., payment gateways, shipping APIs) will be available and reliable for integration. Any downtime or outages from these services will need to be handled by fallback mechanisms or error notifications.
@@ -75,101 +72,93 @@ The Mynthra platform will operate on web browsers and mobile applications (Andro
 ## 3. System Features
 
 ### 3.1 User Registration and Authentication
-*Description*: Shoppers, Shippers, Vendors, and Admins will be able to create accounts, log in, and manage their profiles securely.
+Description: Shoppers, Vendors, and Admins will be able to create accounts, log in, and manage their profiles securely.
 
-*Functional Requirements*:
+Functional Requirements:
 - The system shall allow users to register with email, phone number, or social logins (e.g., Google, Facebook).
 - The system shall send an OTP for account verification.
 - The system shall support secure password recovery via email or SMS.
 - Shoppers shall be able to manage their profiles, including personal information, saved addresses, order history, and payment preferences.
 - Vendors shall be able to manage their profiles, including business information and product catalog.
-- Shippers shall be able to manage their profiles, including contact information and delivery preferences.
 
 ### 3.2 Product Catalog Browsing
-*Description*: Shoppers can search, filter, and browse products by categories, brands, prices, and ratings.
+Description: Shoppers can search, filter, and browse products by categories, brands, prices, and ratings.
 
-*Functional Requirements*:
+Functional Requirements:
 - The system shall allow shoppers to browse products by category (e.g., clothing, accessories, footwear).
 - The system shall provide search and filter functionalities (e.g., price range, brand, size).
 - The system shall display product details, including price, SKU, description, and customer reviews.
 - Vendors shall be able to add, update, and remove products from their catalog and manage product availability.
 
 ### 3.3 Shopping Cart Management
-*Description*: Shoppers can add, remove, and review products in their shopping cart before proceeding to checkout.
+Description: Shoppers can add, remove, and review products in their shopping cart before proceeding to checkout.
 
-*Functional Requirements*:
+Functional Requirements:
 - The system shall allow shoppers to add and remove items from the shopping cart.
 - The system shall display the total cost of items, including taxes and shipping fees.
 - The system shall allow users to modify the quantity of items in the cart.
 
 ### 3.4 Order Placement and Checkout
-*Description*: Shoppers can complete their purchase by submitting orders and making payments.
+Description: Shoppers can complete their purchase by submitting orders and making payments.
 
-*Functional Requirements*:
+Functional Requirements:
 - The system shall provide multiple payment methods (credit card, UPI, net banking).
 - The system shall confirm the order after successful payment.
 - The system shall send an order confirmation email/SMS to the shopper.
 - Vendors shall be notified when an order is placed for their products and shall have the ability to process the order.
-- The system shall assign the order to a shipper for delivery once it is confirmed by the vendor.
 
 ### 3.5 Payment Processing
-*Description*: The system processes payments securely and maintains payment history for shoppers.
+Description: The system processes payments securely and maintains payment history for shoppers.
 
-*Functional Requirements*:
+Functional Requirements:
 - The system shall integrate with secure payment gateways.
 - The system shall store a payment history for shoppers to review past transactions.
 - The system shall automatically deduct the amount upon order confirmation.
 - Vendors shall receive their payment after the order is successfully placed and processed.
-- Shippers may also receive payment for their delivery services, either through the platform or separately, based on the delivery terms.
 
 ### 3.6 Order Tracking
-*Description*: Shoppers can track the status of their orders in real-time.
+Description: Shoppers can track the status of their orders in real-time.
 
-*Functional Requirements*:
+Functional Requirements:
 - The system shall provide real-time order tracking, including shipment status and estimated delivery time.
 - The system shall send notifications when the order status changes (e.g., shipped, out for delivery).
-- Shippers shall update the system with the current delivery status, allowing shoppers to track their order in real time.
 
 ### 3.7 Ratings and Reviews
-*Description*: Shoppers can provide feedback on products and sellers after completing purchases.
+Description: Shoppers can provide feedback on products and sellers after completing purchases.
 
-*Functional Requirements*:
+Functional Requirements:
 - The system shall allow users to rate and review products and sellers after an order is delivered.
 - The system shall display average product ratings and reviews on product pages.
 - Vendors shall be able to view ratings and reviews left by shoppers for their products and services.
-- Shippers shall be able to receive ratings and reviews from shoppers regarding their delivery service.
 
 ---
 
 ## 4. External Interface Requirements
 
 ### 4.1 User Interfaces
-- *Shopper UI*: The platform will offer a user-friendly, responsive interface for product browsing, shopping cart management, and checkout. It will be designed to work across both mobile and desktop devices.
-  - *Mobile Devices*: The mobile app interface will support Android 8.0 and above, and iOS 12.0 and above.
-  - *Web Browsers*: The platform will be fully compatible with the latest versions of web browsers (e.g., Chrome, Firefox, Safari, and Edge).
+- Shopper UI: The platform will offer a user-friendly, responsive interface for product browsing, shopping cart management, and checkout. It will be designed to work across both mobile and desktop devices.
+  - Mobile Devices: The mobile app interface will support Android 8.0 and above, and iOS 12.0 and above.
+  - Web Browsers: The platform will be fully compatible with the latest versions of web browsers (e.g., Chrome, Firefox, Safari, and Edge).
   
-- *Vendor Dashboard*: A web-based interface for sellers to manage product listings, track orders, and review sales performance.
+- Vendor Dashboard: A web-based interface for sellers to manage product listings, track orders, and review sales performance.
 
-- *Admin Panel*: A comprehensive web dashboard for administrators to manage shoppers, orders, and system settings.
-
-- *Shipper Dashboard*: A web-based interface for shippers to track assigned deliveries, update order statuses, and view delivery schedules.
-
+- Admin Panel: A comprehensive web dashboard for administrators to manage shoppers, orders, and system settings.
 
 ### 4.2 Hardware Interfaces
 The system will interact with the following hardware:
-- *Mobile Devices*: For accessing the mobile app.
-- *GPS Modules*: To track shippers' locations in real-time.
-- *Cameras*: Used for profile pictures or uploading product images.
+- Mobile Devices: For accessing the mobile app.
+- GPS Modules: To track delivery statuses in real-time.
+- Cameras: Used for profile pictures or uploading product images.
 
 ### 4.3 Software Interfaces
 The system will integrate with the following external services:
-- *Payment Gateways*: For secure transaction processing.
-- *Logistics APIs*: To manage order shipping, tracking, and delivery status updates for shippers.
-- *SMS/Email APIs*: For sending notifications to users (e.g., order updates, delivery status).
+- Payment Gateways: For secure transaction processing.
+- Logistics APIs: To manage order shipping, tracking, and delivery status updates.
+- SMS/Email APIs: For sending notifications to users (e.g., order updates, delivery status).
 
 ### 4.4 Communication Interfaces
-- The platform will use secure *HTTPS* protocols to protect user data.
-- It will use *WebSocket* for real-time notifications (e.g., order status updates, shipment tracking updates).
+- The platform will use secure HTTPS protocols to protect user data.
+- It will use WebSocket for real-time notifications (e.g., order status updates, shipment tracking updates).
 
 ---
 
