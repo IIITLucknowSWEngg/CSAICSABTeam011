@@ -5,3 +5,6 @@ This document outlines how AI systems were utilized during the development of My
 ---
 
 ## Prompts Used
+**File Name:** `URD.md` 
+
+**Prompt:**  "Create a User Requirements Document (URD) for Mynthra 2.0, an e-commerce platform. The document should define key user personas with their demographics, needs, goals, and tech skills. It should include user stories for their main actions on the platform and provide use cases for features like registration, product management, and admin tasks."
