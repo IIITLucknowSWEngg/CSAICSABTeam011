@@ -1,6 +1,7 @@
 # Project Overview
 
 Myntra is a prominent fashion and lifestyle e-commerce platform that offers a vast selection of clothing, accessories, footwear, and other lifestyle products. With its user-friendly interface, Myntra allows customers to browse through products, filter by categories, and make purchases seamlessly. The platform supports personalized recommendations, multiple payment options, and real-time order tracking, enhancing the shopping experience for users.
+
 ---
 
 # Project Scope
@@ -11,6 +12,14 @@ Myntra is a prominent fashion and lifestyle e-commerce platform that offers a va
    - Enable user sign-up with secure password management (hashed passwords).
    - Implement user login functionality with session handling.
    - Provide third-party login support (e.g., Google, Facebook).
+   - Allow user registration and login via:
+     - Email.
+     - Phone number.
+     - Social media accounts (Google, Facebook).
+   - Include user profile management features:
+     - Personal information (name, email, phone number).
+     - Saved addresses.
+     - Order history.
 
 ### 2. **Product Catalog**:
    - Display a wide variety of products from categories such as:
@@ -124,21 +133,3 @@ Myntra is a prominent fashion and lifestyle e-commerce platform that offers a va
 - Postman for API testing.
 - Docker for containerized deployments.
 
----
-
-# Learning Outcomes
-
-1. Gain hands-on experience in building a complete e-commerce platform.
-2. Understand modular design principles for scalable web applications.
-3. Learn integration of third-party services like payment gateways and social logins.
-4. Improve skills in managing responsive, mobile-friendly designs.
-5. Practice secure coding standards, especially in user authentication.
-
----
-
-# Future Enhancements (Beyond Scope)
-
-1. Integration of an AI-powered recommendation engine.
-2. Implementation of multi-vendor support for broader product catalogs.
-3. Support for international shipping, multi-language, and multi-currency features.
-4. Enhancements to the order tracking system with live shipment data.
