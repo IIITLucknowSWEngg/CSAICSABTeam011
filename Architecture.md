@@ -6,3 +6,7 @@
 ## 2. Container Diagram
 ![cd 10dec](https://github.com/user-attachments/assets/8d9740c8-8278-4107-96d3-a6bf18779453)
 
+
+
+## 3. Component Diagram
+
