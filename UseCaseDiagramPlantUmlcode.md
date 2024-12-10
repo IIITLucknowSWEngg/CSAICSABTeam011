@@ -1,4 +1,4 @@
-# use case diagram  Diagram Code
+# Use case Diagram Code
 ```plantuml
 @startuml
 left to right direction
