@@ -266,7 +266,40 @@ describe('Order Placement', function() {
   });
 });
 ```
+# Feature: Payment Processing
 
+
+### *Scenario: User completes a payment for the order*
+
+#### **Given:**
+- The user has added items to the cart and is on the checkout page.
+
+#### **When:**
+- The user enters valid payment details.
+
+#### **Then:**
+- The payment should be processed successfully.
+- The user should receive a payment confirmation.
+
+
+
+## **Chai.js Code**
+
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const paymentPage = require('../pages/paymentPage');
+
+describe('Payment Processing', function() {
+  it('should process payment successfully', function() {
+    paymentPage.open();
+    paymentPage.enterPaymentDetails('4111111111111111', '12/24', '123');
+    paymentPage.submitPayment();
+    expect(paymentPage.getPaymentConfirmation()).to.equal('Payment successful');
+    expect(browser.getUrl()).to.include('/payment-confirmation');
+  });
+});
+```
 
 # Feature: Order Tracking
 ## Scenario: User checks the status of an order
