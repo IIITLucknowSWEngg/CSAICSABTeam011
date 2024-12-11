@@ -15,3 +15,15 @@ This document outlines the AI systems used during the development of Mynthra 2.0
 https://tech.myntra.com/
 
 https://medium.com/myntra-engineering
+
+**File Name:** `test.md` 
+
+**Prompt:**  "Create a comprehensive test plan for Myntra 2.0, a revamped e-commerce platform. Include details on the testing scope, objectives, strategies, and environment configuration. Break down testing into modules like Customer Module, Product Module, Order Management, and Admin tasks. Also, describe test cases and test types like unit, integration, and performance testing"
+
+
+
+## Engineering Blogs
+https://tech.myntra.com/
+
+https://medium.com/myntra-engineering
+
