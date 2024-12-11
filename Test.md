@@ -327,31 +327,6 @@ describe('Order Tracking', function() {
 });
 ```
 
-# Feature: User Profile Management
-## Scenario: User updates profile information
-### Given:
-The user is logged in.
-
-### When:
-The user navigates to the profile page and updates their information.
-
-### Then:
-The profile should be updated successfully.
-
-### Chai.js Code:
-```javascript
-const chai = require('chai');
-const expect = chai.expect;
-const profilePage = require('../pages/profilePage');
-
-describe('User Profile Management', function() {
-  it('should update user profile successfully', function() {
-    profilePage.open();
-    profilePage.updateProfile('Jane Updated', 'janeupdated@example.com');
-    expect(profilePage.getSuccessMessage()).to.equal('Profile updated successfully');
-  });
-});
-```
 
 
    
