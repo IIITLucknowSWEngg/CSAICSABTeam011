@@ -1,4 +1,130 @@
+# Test Plan for Myntra
 
+1. Introduction
+
+Myntra is a leading e-commerce platform specializing in fashion and lifestyle products.
+
+This document outlines the testing methodology to ensure the platform delivers a seamless shopping experience.
+
+2. Scope
+
+Components to Test:
+
+Customer Module: Registration, login, profile management, search, and wishlist.
+
+Product Module: Product display, reviews, ratings, and filters.
+
+Order Management Module: Cart, order placement, and payment processing.
+
+Delivery Module: Order tracking and delivery confirmation.
+
+Admin Module: Manage inventory, promotions, and view reports.
+
+Third-Party Integrations: Payment gateways, notification services, and logistics APIs.
+
+3. Modules Overview
+
+1. Customer Module
+
+Features:
+
+Registration/Login: Account creation and secure login.
+
+Profile Management: Update and view customer details.
+
+Search: Find products using keywords, categories, or brands.
+
+Wishlist: Save favorite items for future purchase.
+
+2. Product Module
+
+Features:
+
+Product Display: View product images, descriptions, and prices.
+
+Reviews and Ratings: Submit and view customer feedback.
+
+Filters: Refine search results by size, price, brand, and other criteria.
+
+3. Order Management Module
+
+Features:
+
+Cart: Add, edit, or remove items.
+
+Order Placement: Finalize and submit orders.
+
+Payment Gateway: Secure payments via multiple modes.
+
+Order History: View past orders and receipts.
+
+4. Delivery Module
+
+Features:
+
+Real-Time Tracking: Track delivery status.
+
+Delivery Confirmation: Mark orders as delivered.
+
+Return/Exchange: Initiate and manage returns or exchanges.
+
+5. Admin Module
+
+Features:
+
+Inventory Management: Add/update product details and stock levels.
+
+Promotions: Manage discounts, coupons, and offers.
+
+Reports: Analytics on sales, users, and revenue.
+
+4. Objectives
+
+Validate functionality across all modules.
+
+Ensure data security, especially in payment and customer information processes.
+
+Test performance under high customer traffic.
+
+Verify a consistent user experience across devices and browsers.
+
+5. Testing Strategy
+
+Types of Testing:
+
+Unit Testing: Individual components like login or product search.
+
+Integration Testing: Interaction between modules, e.g., product filters with the search module.
+
+System Testing: Full system compliance with requirements.
+
+Performance Testing: Load testing with high traffic (e.g., 20,000 concurrent users).
+
+Security Testing: Vulnerability checks like SQL injection and authentication.
+
+Usability Testing: Ensure intuitive navigation and seamless customer experience.
+
+6. Test Environment
+
+Hardware:
+
+Customer Devices: Mobile (Android/iOS), Desktop.
+
+Server: 16-core CPU, 32 GB RAM, SSD storage.
+
+Software:
+
+Frontend: React/Angular.
+
+Backend: Node.js or Django/Flask.
+
+Database: MongoDB or PostgreSQL.
+
+Configuration:
+
+Staging server mirroring production data.
+
+Mock APIs for early testing.
 # Feature: User Registration in APP
 
 ## Scenario: User registers successfully
