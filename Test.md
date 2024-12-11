@@ -1,130 +1,123 @@
 # Test Plan for Myntra
 
-1. Introduction
+## 1. Introduction
 
-Myntra is a leading e-commerce platform specializing in fashion and lifestyle products.
+- Myntra is a leading e-commerce platform specializing in fashion and lifestyle products.
 
-This document outlines the testing methodology to ensure the platform delivers a seamless shopping experience.
+- This document outlines the testing methodology to ensure the platform delivers a seamless shopping experience.
+  
+---
 
-2. Scope
+## 2. Scope
 
-Components to Test:
+### Components to Test:
 
-Customer Module: Registration, login, profile management, search, and wishlist.
+- **Customer Module**: Registration, login, profile management, search, and wishlist.
 
-Product Module: Product display, reviews, ratings, and filters.
+- **Product Module**: Product display, reviews, ratings, and filters.
 
-Order Management Module: Cart, order placement, and payment processing.
+- **Order Management Module**: Cart, order placement, and payment processing.
 
-Delivery Module: Order tracking and delivery confirmation.
+- **Delivery Module**: Order tracking and delivery confirmation.
 
-Admin Module: Manage inventory, promotions, and view reports.
+- **Admin Module**: Manage inventory, promotions, and view reports.
 
-Third-Party Integrations: Payment gateways, notification services, and logistics APIs.
+- **Third-Party Integrations**: Payment gateways, notification services, and logistics APIs.
 
-3. Modules Overview
+--- 
 
-1. Customer Module
+## 3. Modules Overview
 
-Features:
+### **1. Customer Module**
 
-Registration/Login: Account creation and secure login.
+- **Features**:
 
-Profile Management: Update and view customer details.
+- Registration/Login: Account creation and secure login.
 
-Search: Find products using keywords, categories, or brands.
+- Profile Management: Update and view customer details.
 
-Wishlist: Save favorite items for future purchase.
+- Search: Find products using keywords, categories, or brands.
 
-2. Product Module
+- Wishlist: Save favorite items for future purchase.
 
-Features:
+### **2. Product Module**
 
-Product Display: View product images, descriptions, and prices.
+- **Features**:
 
-Reviews and Ratings: Submit and view customer feedback.
+- Product Display: View product images, descriptions, and prices.
 
-Filters: Refine search results by size, price, brand, and other criteria.
+- Reviews and Ratings: Submit and view customer feedback.
 
-3. Order Management Module
+- Filters: Refine search results by size, price, brand, and other criteria.
 
-Features:
+### **3. Order Management Module**
 
-Cart: Add, edit, or remove items.
+**Features**:
 
-Order Placement: Finalize and submit orders.
+- Cart: Add, edit, or remove items.
 
-Payment Gateway: Secure payments via multiple modes.
+- Order Placement: Finalize and submit orders.
 
-Order History: View past orders and receipts.
+- Payment Gateway: Secure payments via multiple modes.
 
-4. Delivery Module
+- Order History: View past orders and receipts.
 
-Features:
+### **4. Delivery Module**
+- **Features**:
 
-Real-Time Tracking: Track delivery status.
+- Real-Time Tracking: Track delivery status.
 
-Delivery Confirmation: Mark orders as delivered.
+- Delivery Confirmation: Mark orders as delivered.
 
-Return/Exchange: Initiate and manage returns or exchanges.
+- Return/Exchange: Initiate and manage returns or exchanges.
 
-5. Admin Module
+### **5. Admin Module**
+- **Features**:
 
-Features:
+- Inventory Management: Add/update product details and stock levels.
 
-Inventory Management: Add/update product details and stock levels.
+- Promotions: Manage discounts, coupons, and offers.
 
-Promotions: Manage discounts, coupons, and offers.
+- Reports: Analytics on sales, users, and revenue.
+---
 
-Reports: Analytics on sales, users, and revenue.
+## 4. Objectives
 
-4. Objectives
+- Validate functionality across all modules.
+- Ensure data security, especially in payment processes.
+- Test performance under high customer traffic.
+- Verify customer experience on different devices.
 
-Validate functionality across all modules.
+--- 
 
-Ensure data security, especially in payment and customer information processes.
+## 5. Testing Strategy
+### Types of Testing:
+- **Unit Testing**: Individual components like login or menu display.
+- **Integration Testing**: Interaction between modules, e.g., customer orders with restaurants.
+- **System Testing**: Full system compliance with requirements.
+- **Performance Testing**: Load testing with high traffic (e.g., 10,000 users).
+- **Security Testing**: Vulnerability checks like SQL injection and authentication.
+- **Usability Testing**: Ensure seamless customer experience.
 
-Test performance under high customer traffic.
+---
 
-Verify a consistent user experience across devices and browsers.
+## 6. Test Environment
+- **Hardware**:
+  - Customer Devices: Mobile (Android/iOS), Desktop.
+  - Server: 16-core CPU, 32 GB RAM, SSD storage.
 
-5. Testing Strategy
+- **Software**:
+  - Frontend: React/Angular.
+  - Backend: Node.js or Django/Flask.
+  - Database: MongoDB or PostgreSQL.
 
-Types of Testing:
+- **Configuration**:
+  - Staging server mirroring production data.
+  - Mock APIs for early testing.
 
-Unit Testing: Individual components like login or product search.
+---
 
-Integration Testing: Interaction between modules, e.g., product filters with the search module.
-
-System Testing: Full system compliance with requirements.
-
-Performance Testing: Load testing with high traffic (e.g., 20,000 concurrent users).
-
-Security Testing: Vulnerability checks like SQL injection and authentication.
-
-Usability Testing: Ensure intuitive navigation and seamless customer experience.
-
-6. Test Environment
-
-Hardware:
-
-Customer Devices: Mobile (Android/iOS), Desktop.
-
-Server: 16-core CPU, 32 GB RAM, SSD storage.
-
-Software:
-
-Frontend: React/Angular.
-
-Backend: Node.js or Django/Flask.
-
-Database: MongoDB or PostgreSQL.
-
-Configuration:
-
-Staging server mirroring production data.
-
-Mock APIs for early testing.
+## 7. Test Cases
 # Feature: User Registration in APP
 
 ## Scenario: User registers successfully
