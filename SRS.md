@@ -69,9 +69,9 @@ The Mynthra platform will operate on web browsers and mobile applications (Andro
 
 ---
 
-## 3. Use Cases
+## 3. System Features
 
-### 3.1 Shoppers Registration and Authentication
+### 3.1 User Registration and Authentication
 Description: Shoppers, Vendor, and Admins will be able to create accounts, log in, and manage their profiles securely.
 
 Functional Requirements:
@@ -117,54 +117,11 @@ Functional Requirements:
 - Vendor shall receive their payment after the order is successfully placed and processed.
 
 ### 3.6 Order Tracking
-Description: The system provides real-time order tracking for shoppers and vendors, ensuring transparency and timely updates regarding order status.
+Description: Shoppers can track the status of their orders in real-time.
 
-### 3.6.1 For Shoppers:
-### Real-Time Order Tracking:
-
-- Shoppers can view the current status of their orders, including:
-Order placed, 
-Order processed, 
-Shipped, 
-Out for delivery, 
-Delivered.
-- Display estimated delivery time and live location (if available).
-### Notifications:
-
-- Shoppers receive real-time notifications for status updates, such as:
-"Your order has been shipped.", 
-"Your order is out for delivery.", 
-"Your order has been delivered.".
-### Tracking Interface:
-
-- A visually appealing timeline or map-based interface to display the order journey.
-  
-
-### 3.6.2 For Vendors:
-
-### Order Management Dashboard:
-
-- Vendors can view and track all orders placed for their products.
-- Details displayed include:
-Order ID,
-Shopper's name and location,
-Order status (e.g., Processing, Shipped, Delivered),
-Estimated delivery time.
-### Status Updates:
-
-- Vendors can update the status of an order, such as:
-"Order Processed",
-"Order Shipped".
-- Vendors cannot update statuses like "Out for Delivery" or "Delivered" (reserved for logistics).
-### Performance Analytics:
-
-- Vendors can view summarized reports of delivery times and order statuses for their products.
-### Notifications:
-
-- Vendors are notified when:
-A new order is placed,
-An order is cancelled,
-An order is returned.
+Functional Requirements:
+- The system shall provide real-time order tracking, including shipment status and estimated delivery time.
+- The system shall send notifications when the order status changes (e.g., shipped, out for delivery).
 
 ### 3.7 Ratings and Reviews
 Description: Shoppers can provide feedback on products and sellers after completing purchases.
@@ -204,97 +161,33 @@ The system will integrate with the following external services:
 - It will use WebSocket for real-time notifications (e.g., order status updates, shipment tracking updates).
 
 ---
-## 5. Functional Requirements for Order History
 
-### 5.1  View Order History:
+## 5. Non-Functional Requirements
 
--  Shopkeepers should be able to view their past orders after logging into their account.
--  Each order entry should display:
-- Order ID
-- Product details (name, image, size, quantity)
-- Order date and time
-- Order status (e.g., Delivered, Pending, Cancelled)
-- Total amount paid
-- Orders should be listed in reverse chronological order.
-### 5.2 Order Details:
+### 5.1 Performance
+- The platform should load pages within 3 seconds under typical network conditions (e.g., 3G or Wi-Fi).
+- The system must handle up to 1000 concurrent users without performance degradation.
 
-- Shopkeepers should be able to click on an individual order to view more details, such as:
-- Shipping address
-- Payment method
-- Tracking information
-- Estimated delivery date
-### 5.3 Search and Filter:
+### 5.2 Security
+- Data shall be encrypted in transit (TLS) and at rest (AES-256).
+- The system shall enforce strong password policies and support multi-factor authentication.
 
-- Provide functionality to search for specific orders by:
-- Product name
-- Order ID
-- Filter orders by:
-- Order status
-- Date range
-### 5.4 Reorder:
+### 5.3 Usability
+- The app and website shall follow WCAG 2.1 accessibility guidelines.
 
-- Allow Shopkeepers to reorder products directly from their order history.
-### 5.5 Cancel Order:
+### 5.4 Scalability
+- The system must support future growth in terms of both user base and product listings without significant performance issues.
 
-- Shopkeepers can cancel an order if it's still in a "Processing" state.
+### 5.5 Reliability
+- The platform must ensure an uptime of 99.9%, with minimal downtime for maintenance.
 
-
-## 6. Non-Functional Requirements
-### 6.1 Performance:
-
-The Order History pages should load within 2 seconds, even with a large dataset
-### 6.2 Scalability:
-
-The system should support multiple shoppers and vendors with high volumes of data without degradation in performance.
-### 6.3 Data Integrity:
-
-Ensure that the order details displayed are consistent with the database records.
-### 6.4 Security:
-
-- Only authenticated shoppers  can access their respective data.
-- Sensitive information, such as payment details, should be displayed partially or encrypted.
-  
 ---
-  
-## 7. Database Design Considerations
 
-```sql
--- Orders Table
-CREATE TABLE Orders (
-    order_id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    product_id INT NOT NULL,
-    vendor_id INT NOT NULL,
-    quantity INT NOT NULL,
-    total_price DECIMAL(10, 2) NOT NULL,
-    order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    order_status ENUM('Processing', 'Shipped', 'Delivered', 'Cancelled') NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (product_id) REFERENCES Products(product_id),
-    FOREIGN KEY (vendor_id) REFERENCES Vendors(vendor_id)
-);
-
--- Order Details Table
-CREATE TABLE OrderDetails (
-    order_id INT NOT NULL,
-    shipping_address VARCHAR(255) NOT NULL,
-    payment_method ENUM('Credit Card', 'Debit Card', 'Net Banking', 'COD') NOT NULL,
-    tracking_info VARCHAR(255),
-    FOREIGN KEY (order_id) REFERENCES Orders(order_id)
-);
-
-
-
-```
-
-
-## 8. Assumptions and Dependencies
+## 6. Assumptions and Dependencies
 - The platform assumes that shoppers will have access to modern web browsers and smartphones with internet connectivity.
 - The system relies on third-party services for payment processing and shipping integration. Any downtime or outages from these services will be managed through fallback mechanisms or error notifications.
 
 ---
 
-
-
-## 9. Conclusion
+## 7. Conclusion
 This document defines the functional and non-functional requirements for the Mynthra e-commerce platform. It ensures that the development team can build the platform according to user expectations and business objectives.
