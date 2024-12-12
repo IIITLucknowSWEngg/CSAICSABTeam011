@@ -117,11 +117,54 @@ Functional Requirements:
 - Vendor shall receive their payment after the order is successfully placed and processed.
 
 ### 3.6 Order Tracking
-Description: Shoppers can track the status of their orders in real-time.
+Description: The system provides real-time order tracking for shoppers and vendors, ensuring transparency and timely updates regarding order status.
 
-Functional Requirements:
-- The system shall provide real-time order tracking, including shipment status and estimated delivery time.
-- The system shall send notifications when the order status changes (e.g., shipped, out for delivery).
+### For Shoppers:
+### Real-Time Order Tracking:
+
+- Shoppers can view the current status of their orders, including:
+Order placed, 
+Order processed, 
+Shipped, 
+Out for delivery, 
+Delivered, 
+- Display estimated delivery time and live location (if available).
+### Notifications:
+
+- Shoppers receive real-time notifications for status updates, such as:
+"Your order has been shipped.", 
+"Your order is out for delivery.", 
+"Your order has been delivered.", 
+### Tracking Interface:
+
+- A visually appealing timeline or map-based interface to display the order journey.
+- 
+--- 
+### For Vendors:
+
+### Order Management Dashboard:
+
+- Vendors can view and track all orders placed for their products.
+- Details displayed include:
+Order ID,
+Shopper's name and location,
+Order status (e.g., Processing, Shipped, Delivered),
+Estimated delivery time.
+### Status Updates:
+
+- Vendors can update the status of an order, such as:
+"Order Processed",
+"Order Shipped".
+- Vendors cannot update statuses like "Out for Delivery" or "Delivered" (reserved for logistics).
+### Performance Analytics:
+
+- Vendors can view summarized reports of delivery times and order statuses for their products.
+### Notifications:
+
+- Vendors are notified when:
+A new order is placed,
+An order is cancelled,
+An order is returned,
 
 ### 3.7 Ratings and Reviews
 Description: Shoppers can provide feedback on products and sellers after completing purchases.
