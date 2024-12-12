@@ -177,7 +177,7 @@ Admin --> [Admin Panel]
 @enduml
 
 ```
-actor Shopper
+Shopper
 ```
 title Shopper Component - Myntra 2.0
 
@@ -224,11 +224,68 @@ RateReview --> Database : Store Feedback
 
 
 ```
-actor Vendor
+Admin
 ```
+package "Myntra 2.0" {
+    component "Admin Component" as Admin {
+        interface "User Management" as UserManagement
+        interface "Vendor Management" as VendorManagement
+        interface "Order Monitoring" as OrderMonitoring
+        interface "System Configuration" as SystemConfig
+        interface "Transaction Monitoring" as TransactionMonitoring
+        
+        Admin --> UserManagement
+        Admin --> VendorManagement
+        Admin --> OrderMonitoring
+        Admin --> SystemConfig
+        Admin --> TransactionMonitoring
+    }
+}
+
+package "External Systems" {
+    component "Payment Gateway" as PaymentGateway
+    component "Notification Service" as NotificationService
+    component "Audit Logging System" as AuditSystem
+    component "Database" as Database
+}
+
+UserManagement --> Database : CRUD Operations
+VendorManagement --> AuditSystem : Vendor Actions
+OrderMonitoring --> NotificationService : Order Status Alerts
+TransactionMonitoring --> PaymentGateway : Payment Status
+@enduml
+
+
 ```
-actor Admin
+Vendor 
 ````
+@startuml
+title Vendor Component - Myntra 2.0
+package "Myntra 2.0" {
+    component "Vendor Component" as Vendor {
+        interface "Manage Product Listings" as ManageProducts
+        interface "Process Orders" as ProcessOrders
+        interface "Update Inventory" as UpdateInventory
+        interface "View Sales Analytics" as ViewAnalytics
+        
+        Vendor --> ManageProducts
+        Vendor --> ProcessOrders
+        Vendor --> UpdateInventory
+        Vendor --> ViewAnalytics
+    }
+}
+
+package "External Systems" {
+    component "Payment Gateway" as PaymentGateway
+    component "Logistics System" as LogisticsSystem
+    component "Notification Service" as NotificationService
+    component "Analytics Engine" as AnalyticsEngine
+}
+
+ProcessOrders --> LogisticsSystem : Shipment and Delivery Updates
+UpdateInventory --> NotificationService : Stock Level Alerts
+ViewAnalytics --> AnalyticsEngine : Sales Reports
+@enduml
 ````
 #deployement diagram 
 ```
