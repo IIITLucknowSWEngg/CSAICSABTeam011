@@ -19,11 +19,11 @@ Myntra 2.0 is a next-generation e-commerce platform for fashion and lifestyle pr
 ## 2. System Architecture
 The system follows a **microservices-based architecture** for flexibility, maintainability, and scalability. Below is a high-level view of the architecture:
 
-### **Frontend**
+2.1 **Frontend**
 - **Technologies**: ReactJS, Redux, TailwindCSS, Axios
 - **Role**: Handles user interaction, provides dynamic and responsive web pages, and communicates with the backend via REST APIs.
 
-### **Backend**
+2.2 **Backend**
 - **Technologies**: Node.js, FastAPI (Python), Docker, Kubernetes
 - **Microservices**:
   - **User Service**: Manages user authentication and profile data.
@@ -32,12 +32,12 @@ The system follows a **microservices-based architecture** for flexibility, maint
   - **Recommendation Service**: Provides AI-based product recommendations.
   - **Notification Service**: Sends email, SMS, and app notifications.
 
-### **Databases**
+2.2 **Databases**
 - **PostgreSQL**: For relational data (users, orders, payments, etc.).  
 - **MongoDB**: For product catalog, product details, and inventory.  
 - **Redis**: For caching frequently accessed data like user sessions and cart details.  
 
-### **Deployment**
+2.3 **Deployment**
 - **Containerization**: Docker for containerizing services.  
 - **Orchestration**: Kubernetes for scaling and managing containers.  
 - **Cloud Provider**: AWS (Amazon Web Services) for hosting.  
