@@ -15,6 +15,10 @@
 
 ## 1.3 Component Diagram
 ![component  diagram](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/component%20diagram.png)
+ Shopper Component Diagram
+ Admin Component Diagram
+ Vendor Component Diagram
+ 
 
 
 ## 1.4 Deployment Diagram
