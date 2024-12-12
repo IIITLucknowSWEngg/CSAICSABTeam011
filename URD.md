@@ -32,7 +32,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 - **Tech Skills**: High  
 - **Needs**: Looks for discounts and budget-friendly products. Rahul frequently filters products by price and uses coupons during checkout.
 
-### Persona 3: Vendor (Single Vendor)
+### Persona 3: Vendor
 - **Name**: Priya  
 - **Age**: 35  
 - **Occupation**: Boutique Owner  
