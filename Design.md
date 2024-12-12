@@ -32,12 +32,12 @@ The system follows a **microservices-based architecture** for flexibility, maint
   - **Recommendation Service**: Provides AI-based product recommendations.
   - **Notification Service**: Sends email, SMS, and app notifications.
 
-2.2 **Databases**
+2.3 **Databases**
 - **PostgreSQL**: For relational data (users, orders, payments, etc.).  
 - **MongoDB**: For product catalog, product details, and inventory.  
 - **Redis**: For caching frequently accessed data like user sessions and cart details.  
 
-2.3 **Deployment**
+2.4 **Deployment**
 - **Containerization**: Docker for containerizing services.  
 - **Orchestration**: Kubernetes for scaling and managing containers.  
 - **Cloud Provider**: AWS (Amazon Web Services) for hosting.  
