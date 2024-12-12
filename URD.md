@@ -16,7 +16,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 
 ---
 
-## 5. User Personas
+## 1. User Personas
 
 ### Persona 1: Fashion Enthusiast (Shopper)
 - **Name**: Meera  
@@ -48,7 +48,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
   
 ---
 
-## 6. User Stories
+## 2. User Stories
 
 - **User Story 1**: As a shopper, I want to browse through a variety of clothing categories so that I can find items that suit my taste and needs.
 - **User Story 2**: As a shopper, I want to filter products based on size, color, and price so that I can quickly find what I am looking for.
@@ -61,7 +61,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 
 ---
 
-## 7. Use Cases
+## 3. Use Cases
 
 ### **Use Case 1: Shopper Registration**
 - **Actors**: Shopper  
@@ -102,7 +102,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 
 ---
 
-## 8. Assumptions and Dependencies
+## 4. Assumptions and Dependencies
 
 - Shoppers, vendors, and admins will have internet access and devices that support a modern web browser.
 - The platform will integrate with third-party payment gateways for order processing.
@@ -110,7 +110,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 
 ---
 
-## 9. Glossary
+## 5. Glossary
 
 - **Shopper**: A user who visits the platform to browse or purchase products.
 - **Vendor**: A single vendor or boutique that provides all the products listed for sale on the platform.
