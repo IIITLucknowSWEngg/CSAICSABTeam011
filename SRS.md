@@ -3,7 +3,7 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-This Software Requirements Specification (SRS) document outlines the functional and non-functional requirements for the Mynthra e-commerce platform. It serves as a guide for developers, testers, and stakeholders throughout the software development lifecycle, ensuring the platform meets the needs of shoppers, vendors, and administrators.
+This Software Requirements Specification (SRS) document outlines the functional and non-functional requirements for the Mynthra e-commerce platform. It serves as a guide for developers, testers, and stakeholders throughout the software development lifecycle, ensuring the platform meets the needs of shoppers, vendor, and administrators.
 
 ### 1.2 Scope
 The Mynthra e-commerce platform enables users to browse, purchase, and manage products such as clothing, footwear, and accessories. The system will handle user registration, product browsing, order placement, payment processing, and order tracking. This SRS covers the functional and non-functional requirements, user interfaces, external interfaces, and design constraints for the development and implementation of Mynthra.
@@ -36,7 +36,7 @@ The Mynthra platform is an e-commerce system designed to operate on both mobile 
 
 ### 2.2 Product Functions
 - User registration and authentication.  
-- Product catalog management (by vendors).  
+- Product catalog management (by vendor).  
 - Shopping cart and order management.  
 - Real-time order tracking and delivery management.  
 - Payment processing and history tracking.  
@@ -44,7 +44,7 @@ The Mynthra platform is an e-commerce system designed to operate on both mobile 
 
 ### 2.3 User Classes and Characteristics
 - Shoppers: Individuals using the platform to browse products, place orders, and track deliveries.  
-- Vendors: Businesses managing product listings, orders, and stock availability.  
+- Vendor: Businesses managing product listings, orders, and stock availability.  
 - Admins: Individuals managing the platform, overseeing user, vendor, and order activities.
 
 ### 2.4 Operating Environment
@@ -62,7 +62,7 @@ The Mynthra platform will operate on web browsers and mobile applications (Andro
 - The platform will initially only support one currency (INR) and one language (English).
 
 ### 2.6 Assumptions and Dependencies
-- Shoppers and vendors have access to devices with stable internet connections.
+- Shoppers and vendor have access to devices with stable internet connections.
 - Third-party service integrations for payment, logistics, and notifications will be reliable.  
 - The system will initially support domestic transactions only.  
 - The platform assumes that third-party services (e.g., payment gateways, shipping APIs) will be available and reliable for integration. Any downtime or outages from these services will need to be handled by fallback mechanisms or error notifications.
@@ -72,14 +72,14 @@ The Mynthra platform will operate on web browsers and mobile applications (Andro
 ## 3. System Features
 
 ### 3.1 User Registration and Authentication
-Description: Shoppers, Vendors, and Admins will be able to create accounts, log in, and manage their profiles securely.
+Description: Shoppers, Vendor, and Admins will be able to create accounts, log in, and manage their profiles securely.
 
 Functional Requirements:
 - The system shall allow users to register with email, phone number, or social logins (e.g., Google, Facebook).
 - The system shall send an OTP for account verification.
 - The system shall support secure password recovery via email or SMS.
 - Shoppers shall be able to manage their profiles, including personal information, saved addresses, order history, and payment preferences.
-- Vendors shall be able to manage their profiles, including business information and product catalog.
+- Vendor shall be able to manage their profiles, including business information and product catalog.
 
 ### 3.2 Product Catalog Browsing
 Description: Shoppers can search, filter, and browse products by categories, brands, prices, and ratings.
@@ -88,7 +88,7 @@ Functional Requirements:
 - The system shall allow shoppers to browse products by category (e.g., clothing, accessories, footwear).
 - The system shall provide search and filter functionalities (e.g., price range, brand, size).
 - The system shall display product details, including price, SKU, description, and customer reviews.
-- Vendors shall be able to add, update, and remove products from their catalog and manage product availability.
+- Vendor shall be able to add, update, and remove products from their catalog and manage product availability.
 
 ### 3.3 Shopping Cart Management
 Description: Shoppers can add, remove, and review products in their shopping cart before proceeding to checkout.
@@ -105,7 +105,7 @@ Functional Requirements:
 - The system shall provide multiple payment methods (credit card, UPI, net banking).
 - The system shall confirm the order after successful payment.
 - The system shall send an order confirmation email/SMS to the shopper.
-- Vendors shall be notified when an order is placed for their products and shall have the ability to process the order.
+- Vendor shall be notified when an order is placed for their products and shall have the ability to process the order.
 
 ### 3.5 Payment Processing
 Description: The system processes payments securely and maintains payment history for shoppers.
@@ -114,7 +114,7 @@ Functional Requirements:
 - The system shall integrate with secure payment gateways.
 - The system shall store a payment history for shoppers to review past transactions.
 - The system shall automatically deduct the amount upon order confirmation.
-- Vendors shall receive their payment after the order is successfully placed and processed.
+- Vendor shall receive their payment after the order is successfully placed and processed.
 
 ### 3.6 Order Tracking
 Description: Shoppers can track the status of their orders in real-time.
@@ -129,7 +129,7 @@ Description: Shoppers can provide feedback on products and sellers after complet
 Functional Requirements:
 - The system shall allow users to rate and review products and sellers after an order is delivered.
 - The system shall display average product ratings and reviews on product pages.
-- Vendors shall be able to view ratings and reviews left by shoppers for their products and services.
+- Vendor shall be able to view ratings and reviews left by shoppers for their products and services.
 
 ---
 
