@@ -20,7 +20,13 @@ This document outlines the AI systems used during the development of Mynthra 2.0
 
 **Prompt:**  "Create a comprehensive test plan for Myntra 2.0, a revamped e-commerce platform. Include details on the testing scope, objectives, strategies, and environment configuration. Break down testing into modules like Customer Module, Product Module, Order Management, and Admin tasks. Also, describe test cases and test types like unit, integration, and performance testing"
 
+**File Name:** `Stakeholders.md` 
 
+**Prompt:**  "Identify key stakeholders for Myntra 2.0, an e-commerce platform, and describe their roles and responsibilities. Provide insights into how their involvement impacts various stages of the development process and ensure their needs align with project goals."
+
+**File Name:** `CrossReferenceMatrix.md` 
+
+**Prompt:**  "Develop a Cross Reference Matrix for Myntra 2.0, showing the relationships between requirements and the corresponding test cases, ensuring traceability and full coverage during testing. Represent this in a tabular format."
 
 ## Engineering Blogs
 https://tech.myntra.com/
