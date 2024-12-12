@@ -71,7 +71,7 @@ The Mynthra platform will operate on web browsers and mobile applications (Andro
 
 ## 3. Use Cases
 
-### 3.1 User Registration and Authentication
+### 3.1 Shoppers Registration and Authentication
 Description: Shoppers, Vendor, and Admins will be able to create accounts, log in, and manage their profiles securely.
 
 Functional Requirements:
