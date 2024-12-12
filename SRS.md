@@ -6,7 +6,7 @@
 This Software Requirements Specification (SRS) document outlines the functional and non-functional requirements for the Mynthra e-commerce platform. It serves as a guide for developers, testers, and stakeholders throughout the software development lifecycle, ensuring the platform meets the needs of shoppers, vendor, and administrators.
 
 ### 1.2 Scope
-The Mynthra e-commerce platform enables users to browse, purchase, and manage products such as clothing, footwear, and accessories. The system will handle user registration, product browsing, order placement, payment processing, and order tracking. This SRS covers the functional and non-functional requirements, user interfaces, external interfaces, and design constraints for the development and implementation of Mynthra.
+The Myntra e-commerce platform enables users to browse, purchase, and manage products such as clothing, footwear, and accessories. The system will handle user registration, product browsing, order placement, payment processing, and order tracking. This SRS covers the functional and non-functional requirements, user interfaces, external interfaces, and design constraints for the development and implementation of Mynthra.
 
 ### 1.3 Definitions, Acronyms, and Abbreviations
 - SRS: Software Requirements Specification  
@@ -25,14 +25,14 @@ The Mynthra e-commerce platform enables users to browse, purchase, and manage pr
 - User Requirements Document
 
 ### 1.5 Overview
-This document is structured into several sections that define the system's overall description, functional and non-functional requirements, external interfaces, and design constraints relevant to the development of the Mynthra platform.
+This document is structured into several sections that define the system's overall description, functional and non-functional requirements, external interfaces, and design constraints relevant to the development of the Myntra platform.
 
 ---
 
 ## 2. Overall Description
 
 ### 2.1 Product Perspective
-The Mynthra platform is an e-commerce system designed to operate on both mobile and desktop devices. It interfaces with external systems such as payment gateways, inventory management systems, and third-party APIs for logistics and shipping. The platform will be modular in design, allowing for easy scaling and feature expansion.
+The Myntra platform is an e-commerce system designed to operate on both mobile and desktop devices. It interfaces with external systems such as payment gateways, inventory management systems, and third-party APIs for logistics and shipping. The platform will be modular in design, allowing for easy scaling and feature expansion.
 
 ### 2.2 Product Functions
 - User registration and authentication.  
@@ -48,7 +48,7 @@ The Mynthra platform is an e-commerce system designed to operate on both mobile 
 - Admins: Individuals managing the platform, overseeing user, vendor, and order activities.
 
 ### 2.4 Operating Environment
-The Mynthra platform will operate on web browsers and mobile applications (Android and iOS). It requires internet connectivity for functionalities such as product browsing, checkout, and order tracking. The backend will be hosted on cloud services for high availability and scalability.
+The Myntra platform will operate on web browsers and mobile applications (Android and iOS). It requires internet connectivity for functionalities such as product browsing, checkout, and order tracking. The backend will be hosted on cloud services for high availability and scalability.
 
 - Web Browsers: The platform supports the latest versions of popular web browsers, including Chrome, Firefox, Safari, and Microsoft Edge.
 - Mobile Applications:
