@@ -68,6 +68,8 @@ System_Boundary(mynthra, "Mynthra 2.0") {
 System_Ext(payment_gateway, "Payment Gateway", "Payment processing")
 System_Ext(logistics_api, "Logistics API", "Shipping services and order tracking")
 System_Ext(sms_email, "SMS/Email Notifications", "Order confirmations and updates")
+System_Ext(inventory_management, "Inventory Management System", "Manages product stock and inventory levels")
+System_Ext(analytics_service, "Analytics Service", "Provides analytics on products, orders, and sales trends")
 
 Rel(shopper, web, "Uses", "HTTPS")
 Rel(shopper, mobile, "Uses", "HTTPS")
@@ -98,6 +100,9 @@ Rel(notification, sms_email, "Sends notifications", "API")
 
 Rel(product, queue, "Publishes", "AMQP")
 Rel(order, queue, "Publishes", "AMQP")
+
+Rel(product, inventory_management, "Checks inventory", "gRPC")
+Rel(order, analytics_service, "Sends order data for analysis", "gRPC")
 @enduml
 ```
 #component diagram
