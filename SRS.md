@@ -162,10 +162,10 @@ The system will integrate with the following external services:
 
 ---
 ## 5. Functional Requirements for Order History
-### For users
+### For shopkeepers
 ### 5.1  View Order History:
 
--   Users should be able to view their past orders after logging into their account.
+-  Shopkeepers should be able to view their past orders after logging into their account.
 -  Each order entry should display:
 - Order ID
 - Product details (name, image, size, quantity)
@@ -175,7 +175,7 @@ The system will integrate with the following external services:
 - Orders should be listed in reverse chronological order.
 ### 5.2 Order Details:
 
-- Users should be able to click on an individual order to view more details, such as:
+- Shopkeepers should be able to click on an individual order to view more details, such as:
 - Shipping address
 - Payment method
 - Tracking information
@@ -190,10 +190,10 @@ The system will integrate with the following external services:
 - Date range
 ### 5.4 Reorder:
 
-- Allow users to reorder products directly from their order history.
+- Allow Shopkeepers to reorder products directly from their order history.
 ### 5.5 Cancel Order:
 
-- Users can cancel an order if it's still in a "Processing" state.
+- Shopkeepers can cancel an order if it's still in a "Processing" state.
  ###  For Vendors:
 ### 5.7 View Sales History:
 
