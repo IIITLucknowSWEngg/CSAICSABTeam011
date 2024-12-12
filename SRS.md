@@ -119,7 +119,7 @@ Functional Requirements:
 ### 3.6 Order Tracking
 Description: The system provides real-time order tracking for shoppers and vendors, ensuring transparency and timely updates regarding order status.
 
-### For Shoppers:
+### 3.6.1 For Shoppers:
 ### Real-Time Order Tracking:
 
 - Shoppers can view the current status of their orders, including:
@@ -127,20 +127,20 @@ Order placed,
 Order processed, 
 Shipped, 
 Out for delivery, 
-Delivered, 
+Delivered.
 - Display estimated delivery time and live location (if available).
 ### Notifications:
 
 - Shoppers receive real-time notifications for status updates, such as:
 "Your order has been shipped.", 
 "Your order is out for delivery.", 
-"Your order has been delivered.", 
+"Your order has been delivered.".
 ### Tracking Interface:
 
 - A visually appealing timeline or map-based interface to display the order journey.
-- 
---- 
-### For Vendors:
+  
+
+### 3.6.2 For Vendors:
 
 ### Order Management Dashboard:
 
@@ -164,7 +164,7 @@ Estimated delivery time.
 - Vendors are notified when:
 A new order is placed,
 An order is cancelled,
-An order is returned,
+An order is returned.
 
 ### 3.7 Ratings and Reviews
 Description: Shoppers can provide feedback on products and sellers after completing purchases.
