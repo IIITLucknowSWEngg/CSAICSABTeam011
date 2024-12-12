@@ -123,7 +123,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 - **Postcondition**: The system processes the order, generates a receipt, and the shopper receives an order confirmation.  
 - **Exceptions**: If payment fails, an error message is displayed, and the shopper is prompted to retry or choose a different method.
 
-## Use Case 7: Shopper Tracks an Order
+## Use Case 6: Shopper Tracks an Order
 - **Actors**: Shopper  
 - **Goal**: Allow the shopper to track the status of their placed orders.  
 - **Precondition**: Shopper has successfully placed an order.  
@@ -134,7 +134,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 - **Postcondition**: The shopper can track their order from placement to delivery.  
 - **Exceptions**: If tracking data is unavailable (e.g., due to delays), the system displays a message indicating the delay.
 
-## Use Case 9: Admin Manages Products
+## Use Case 7: Admin Manages Products
 - **Actors**: Admin  
 - **Goal**: Allow the admin to add, edit, or remove products from the platform.  
 - **Precondition**: Admin is logged in.  
@@ -146,7 +146,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 - **Postcondition**: The product catalog is updated.  
 - **Exceptions**: If an error occurs while saving changes, an error message is displayed.
 
-## Use Case 10: Admin Manages Orders
+## Use Case 8: Admin Manages Orders
 - **Actors**: Admin  
 - **Goal**: Enable the admin to view and manage shopper orders.  
 - **Precondition**: Admin is logged in.  
@@ -157,7 +157,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 - **Postcondition**: The order status is updated.  
 - **Exceptions**: If an error occurs while updating the order, an error message is displayed.
 
-## Use Case 11: Admin Manages Users
+## Use Case 9: Admin Manages Users
 - **Actors**: Admin  
 - **Goal**: Allow the admin to manage shopper accounts.  
 - **Precondition**: Admin is logged in.  
@@ -168,7 +168,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 - **Postcondition**: The admin successfully manages shopper accounts.  
 - **Exceptions**: If an error occurs while managing accounts, an error message is displayed.
 
-## Use Case 12: Shopper Logs Out
+## Use Case 10: Shopper Logs Out
 - **Actors**: Shopper  
 - **Goal**: Enable the shopper to log out of their account.  
 - **Precondition**: Shopper is logged in.  
