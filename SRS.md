@@ -234,7 +234,7 @@ Ensure that the order details displayed are consistent with the database records
   
 ## 7. Database Design Considerations
 
-
+```sql
 -- Orders Table
 CREATE TABLE Orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -273,7 +273,7 @@ ADD COLUMN vendor_id INT NOT NULL,
 ADD FOREIGN KEY (vendor_id) REFERENCES Vendors(vendor_id);
 
 
-
+```
 
 
 
