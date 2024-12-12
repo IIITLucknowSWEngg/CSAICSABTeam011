@@ -10,14 +10,11 @@ This document outlines the AI systems used during the development of Mynthra 2.0
 **Prompt:**  "Create a User Requirements Document (URD) for Mynthra 2.0, an e-commerce platform. The document should define key user personas with their demographics, needs, goals, and tech skills. It should include user stories for their main actions on the platform and provide use cases for features like registration, product management, and admin tasks."
 
 
+**File Name:** `Architecture.md` 
 
-## Engineering Blogs
-https://tech.myntra.com/
+**Prompt 1:**  "Create a System Context Diagram for Mynthra 2.0, showing key stakeholders (Shoppers, Vendors, Admins) and external systems (Payment Gateway, Logistics API, SMS/Email Service, Inventory, Analytics). Illustrate their interactions with the platform, such as browsing, purchasing, product management, payments, and delivery tracking."
 
-https://medium.com/myntra-engineering
-
-
----
+**Prompt 2:** "Create a Container Diagram for Mynthra 2.0, showing key components like Web App, Mobile App, API Gateway, and backend services (Product, User, Cart, Order, Payment, etc.). Include databases (MongoDB, PostgreSQL), external systems (Payment Gateway, Logistics API, SMS/Email), and illustrate how these components interact through APIs, databases, and message queues.
 
 **File Name:** `test.md` 
 
