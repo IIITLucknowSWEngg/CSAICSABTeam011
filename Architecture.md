@@ -20,6 +20,7 @@
  Admin Component Diagram
  ![admin](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/Admin%20component%20diagram.png)
  Vendor Component Diagram
+ ![Vendor](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/Vendor%20Component%20Diagram.png)
  
 
 
