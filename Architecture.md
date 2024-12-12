@@ -1,3 +1,9 @@
+# 1. C4 Diagrams 🚀
+
+### The C4 model for visualising software architecture :- 
+![c4model](https://github.com/user-attachments/assets/7d640922-2dcc-443b-a048-1e36daf94fb7)
+
+
 ## 1. System Context Diagram
 ![System Context Diagram -very new](https://github.com/user-attachments/assets/73176051-9344-4c87-8ae1-7c4dd8c12531)
 
