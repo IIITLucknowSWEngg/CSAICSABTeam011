@@ -89,21 +89,21 @@ The UI follows a **mobile-first approach** to ensure a seamless user experience 
 ## 6. API Design
 APIs enable the frontend to communicate with the backend microservices. Here are some key endpoints:
 
-### **User Service**
+6.1 **User Service**
 | **Endpoint** | **Method** | **Description** |
 |--------------|------------|------------------|
 | `/api/user/register` | POST | Register a new user. |
 | `/api/user/login` | POST | Log in an existing user. |
 | `/api/user/profile` | GET | Get user profile details. |
 
-### **Product Service**
+6.2 **Product Service**
 | **Endpoint** | **Method** | **Description** |
 |--------------|------------|------------------|
 | `/api/products` | GET | Fetch all products. |
 | `/api/products/{id}` | GET | Get product details by ID. |
 | `/api/products/search` | GET | Search for products by name, category, or filters. |
 
-### **Order Service**
+6.3 **Order Service**
 | **Endpoint** | **Method** | **Description** |
 |--------------|------------|------------------|
 | `/api/cart` | GET | Get the current cart. |
@@ -117,7 +117,7 @@ APIs enable the frontend to communicate with the backend microservices. Here are
 The following schema highlights the key database tables and collections.
 
 ### **1. PostgreSQL**
-- **Users Table**  
+- 7.1 **Users Table**  
   | **Field**      | **Data Type** | **Description**         |
   |----------------|---------------|-------------------------|
   | `user_id`      | INT (PK)      | Unique identifier for each user. |
@@ -125,7 +125,7 @@ The following schema highlights the key database tables and collections.
   | `password`     | VARCHAR(255)  | Hashed user password.   |
   | `role`         | ENUM('admin', 'user') | Role of the user.     |
 
-- **Orders Table**  
+- 7.2 **Orders Table**  
   | **Field**      | **Data Type** | **Description**         |
   |----------------|---------------|-------------------------|
   | `order_id`     | INT (PK)      | Unique identifier for each order. |
@@ -133,14 +133,3 @@ The following schema highlights the key database tables and collections.
   | `total_price`  | DECIMAL(10,2) | Total cost of the order. |
   | `status`       | ENUM('pending', 'shipped', 'delivered') | Order status.  |
 
-### **2. MongoDB**
-- **Products Collection**  
-  ```json
-  {
-    "product_id": "P123",
-    "name": "Men's T-shirt",
-    "description": "100% cotton t-shirt",
-    "price": 999.99,
-    "stock": 50,
-    "category": "Men's Wear"
-  }
