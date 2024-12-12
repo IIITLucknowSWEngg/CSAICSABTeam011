@@ -118,7 +118,7 @@
 ---
 
 ## 7. Test Cases
-# Feature: Shoppers Registration in APP
+# 7.1 Feature: Shoppers Registration in APP
 
 ## Scenario: Shoppers registers successfully
 
@@ -149,7 +149,7 @@ describe('User Registration', function() {
 });
 ```
 
-# Feature: Shoppers Login
+# 7.2 Feature: Shoppers Login
 
 ## Scenario: Shoppers logs in with valid credentials
 
@@ -182,7 +182,7 @@ describe('User Login', function() {
 });
 ```
 
-# Feature: Product Catalog Browsing
+# 7.3 Feature: Product Catalog Browsing
 
 ## Scenario: Shoppers browses products successfully
 
@@ -211,7 +211,7 @@ describe('Product Catalog Browsing', function() {
 });
 ```
 
-# Feature: Shopping Cart Management
+# 7.4 Feature: Shopping Cart Management
 ## Scenario: Shoppers adds a product to the cart
 ### Given:
 The Shoppers is on a product detail page.
@@ -239,7 +239,7 @@ describe('Shopping Cart Management', function() {
 });
 ```
 
-# Feature: Order Placement
+# 7.5 Feature: Order Placement
 ## Scenario: Shoppers places an order successfully
 ### Given:
 The Shoppers has products in the shopping cart.
@@ -266,7 +266,7 @@ describe('Order Placement', function() {
   });
 });
 ```
-# Feature: Payment Processing
+# 7.6 Feature: Payment Processing
 
 
 ### *Scenario: Shoppers completes a payment for the order*
@@ -301,7 +301,7 @@ describe('Payment Processing', function() {
 });
 ```
 
-# Feature: Order Tracking
+# 7.7 Feature: Order Tracking
 ## Scenario: Shoppers checks the status of an order
 ### Given:
 The Shoppers has placed an order.
@@ -330,7 +330,7 @@ describe('Order Tracking', function() {
 
 
 
-# Feature: Vendor Login
+# 7.8 Feature: Vendor Login
 ## Scenario: Vendor logs in with valid credentials
 ### Given:
 The Vendor is on the login page.
@@ -359,7 +359,7 @@ describe('Vendor Login', function() {
 });
 ```
 
-# Feature: Vendor Product Catalog Management
+# 7.9 Feature: Vendor Product Catalog Management
 ## Scenario: Vendor adds a new product to the catalog
 ### Given:
 The Vendor is on the product management page.
@@ -389,7 +389,7 @@ describe('Vendor Product Catalog Management', function() {
 ```
 
 
-# Feature: Vendor Order Management
+# 7.10 Feature: Vendor Order Management
 ## Scenario: Vendor views order details
 ### Given:
 The Vendor is on the vendor order management page.
@@ -420,7 +420,7 @@ describe('Vendor Order Management', function() {
 
 
 
-# Feature: Admin Registration in App
+# 7.11 Feature: Admin Registration in App
 ## Scenario: Admin registers successfully
 ### Given:
 The Admin is on the registration page.
@@ -450,7 +450,7 @@ describe('Admin Registration', function() {
 });
 ```
 
-# Feature: Admin Login
+# 7.12 Feature: Admin Login
 ## Scenario: Admin logs in with valid credentials
 ### Given:
 The Admin is on the login page.
@@ -479,7 +479,7 @@ describe('Admin Login', function() {
 });
 ```
 
-# Feature: Admin Order Management
+# 7.13 Feature: Admin Order Management
 ## Scenario: Admin views the details of an order
 ### Given:
 The Admin is on the order management page.
