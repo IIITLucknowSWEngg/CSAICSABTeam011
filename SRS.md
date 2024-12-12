@@ -161,33 +161,80 @@ The system will integrate with the following external services:
 - It will use WebSocket for real-time notifications (e.g., order status updates, shipment tracking updates).
 
 ---
+## 5. Functional Requirements for Order History
+### 5.1  View Order History:
 
-## 5. Non-Functional Requirements
+### 5.2  Users should be able to view their past orders after logging into their account.
+### 5.3  Each order entry should display:
+- Order ID
+- Product details (name, image, size, quantity)
+- Order date and time
+- Order status (e.g., Delivered, Pending, Cancelled)
+- Total amount paid
+- Orders should be listed in reverse chronological order.
+### 5.4 Order Details:
 
-### 5.1 Performance
-- The platform should load pages within 3 seconds under typical network conditions (e.g., 3G or Wi-Fi).
-- The system must handle up to 1000 concurrent users without performance degradation.
+- Users should be able to click on an individual order to view more details, such as:
+- Shipping address
+- Payment method
+- Tracking information
+- Estimated delivery date
+### 5.5 Search and Filter:
 
-### 5.2 Security
-- Data shall be encrypted in transit (TLS) and at rest (AES-256).
-- The system shall enforce strong password policies and support multi-factor authentication.
+- Provide functionality to search for specific orders by:
+- Product name
+- Order ID
+- Filter orders by:
+- Order status
+- Date range
+### 5.6 Reorder:
 
-### 5.3 Usability
-- The app and website shall follow WCAG 2.1 accessibility guidelines.
+- Allow users to reorder products directly from their order history.
+### 5.7 Cancel Order:
 
-### 5.4 Scalability
-- The system must support future growth in terms of both user base and product listings without significant performance issues.
+- Users can cancel an order if it's still in a "Processing" state.
+## 6. Non-Functional Requirements
+### 6.1 Performance:
 
-### 5.5 Reliability
-- The platform must ensure an uptime of 99.9%, with minimal downtime for maintenance.
+The order history page should load within 2 seconds, even for users with extensive order records.
+### 6.2 Scalability:
 
----
+The system should handle a large number of orders per user without degrading performance.
+### 6.3 Data Integrity:
 
-## 6. Assumptions and Dependencies
+Ensure that the order details displayed are consistent with the database records.
+### 6.4 Security:
+
+Only authenticated users can access their order history.
+Sensitive information, such as payment details, should be displayed partially or encrypted.
+## 7. Database Design Considerations
+In the "Database Schema" section of your SRS, you could mention how you will store order history:
+
+### 7.1 Orders Table:
+
+- order_id (Primary Key)
+- user_id (Foreign Key)
+- product_id (Foreign Key)
+- quantity
+- total_price
+- order_date
+- order_status
+### 7.3  Order Details Table (if needed):
+
+- order_id (Foreign Key)
+- shipping_address
+- payment_method
+- tracking_info
+
+
+
+
+
+## 8. Assumptions and Dependencies
 - The platform assumes that shoppers will have access to modern web browsers and smartphones with internet connectivity.
 - The system relies on third-party services for payment processing and shipping integration. Any downtime or outages from these services will be managed through fallback mechanisms or error notifications.
 
 ---
 
-## 7. Conclusion
+## 9. Conclusion
 This document defines the functional and non-functional requirements for the Mynthra e-commerce platform. It ensures that the development team can build the platform according to user expectations and business objectives.
