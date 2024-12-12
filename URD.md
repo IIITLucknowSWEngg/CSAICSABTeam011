@@ -1,198 +1,106 @@
-# User Requirements Document (URD)
+# User Requirements Document (URD) for Mynthra 2.0
 
 ## Overview
-
-This document outlines the user requirements for Myntra 2.0, an e-commerce platform designed to provide a seamless shopping experience for fashion lovers. The platform will cater to three main user personas: shoppers, a single vendor, and admins, ensuring intuitive browsing, filtering, and order placement features. The focus is on delivering an efficient, user-friendly interface for exploring, selecting, and purchasing fashion products while allowing users to manage their accounts, wishlists, and order tracking. The platform will support only one vendor who will provide all the products listed for sale. 
-
----
-
-## Table of Contents
-
-1. [User Personas](#user-personas)  
-2. [User Stories](#user-stories)  
-3. [Use Cases](#use-cases)  
-4. [Assumptions and Dependencies](#assumptions-and-dependencies)  
-5. [Glossary](#glossary)  
+This document defines the requirements and expectations for users of the Mynthra 2.0 platform, including all roles (shoppers, vendor, and admins). It covers the entire journey from account creation to order placement and management, ensuring a seamless and user-friendly experience for each user type.
 
 ---
 
-## 1. User Personas
+## User Stories
 
-### Persona 1: Fashion Enthusiast (Shopper)
-- **Name**: Meera  
-- **Age**: 25  
-- **Occupation**: Marketing Executive  
-- **Tech Skills**: Moderate  
-- **Needs**: Wants a simple, visually appealing platform to explore the latest fashion trends and make quick purchases. Meera prefers mobile shopping and relies on a smooth and easy-to-navigate user experience.
+### 1. **User Registration and Authentication**
+- **As a shopper**, I want to create an account using my email or phone number so that I can access personalized shopping features.
+- **As a shopper**, I want to reset my password easily if I forget it so that I can regain access quickly.
+- **As a shopper**, I want to log in using Google or Apple for a faster sign-in experience.
+- **As a vendor**, I want to register for the platform so that I can list my products and manage my store.
+- **As a vendor**, I want to log in securely using my registered email and password so that I can access the admin panel.
+- **As an admin**, I want to securely log in to the platform using my credentials so that I can manage the overall system.
 
-### Persona 2: Budget-Conscious Shopper
-- **Name**: Rahul  
-- **Age**: 30  
-- **Occupation**: Engineer  
-- **Tech Skills**: High  
-- **Needs**: Looks for discounts and budget-friendly products. Rahul frequently filters products by price and uses coupons during checkout.
+### 2. **Product Search and Browsing**
+- **As a shopper**, I want to search for specific products by name or category so that I can find items quickly.
+- **As a shopper**, I want to filter and sort products by price, ratings, and brand so that I can make informed purchasing decisions.
+- **As a shopper**, I want to see product recommendations based on my browsing and purchase history so that I can discover relevant products.
+- **As an admin**, I want to oversee the products listed by vendor to ensure that they meet platform guidelines.
 
-### Persona 3: Vendor
-- **Name**: Priya  
-- **Age**: 35  
-- **Occupation**: Boutique Owner  
-- **Tech Skills**: Low  
-- **Needs**: Needs a straightforward way to upload new products, manage inventory, track orders, and monitor product performance. Priya relies on a simple dashboard to view sales and customer feedback.
+### 3. **Product Information and Reviews**
+- **As a shopper**, I want to view detailed product information including price, size options, and images so that I can evaluate if it suits my needs.
+- **As a shopper**, I want to read reviews and ratings from other shoppers so that I can trust the product quality.
+- **As a vendor**, I want to add, edit, or remove products from my store so that I can keep my catalog up to date.
+- **As a vendor**, I want to manage product details including price, quantity, description, and images so that my products are accurately represented to shoppers.
 
-### Persona 4: Admin
-- **Name**: Arjun  
-- **Age**: 40  
-- **Occupation**: E-commerce Manager  
-- **Tech Skills**: High  
-- **Needs**: Requires a comprehensive platform to monitor overall performance, manage shopper interactions, resolve complaints, and oversee website functionality. Arjun also ensures the platform runs smoothly by handling operational tasks.
-  
----
+### 4. **Shopping Cart**
+- **As a shopper**, I want to add products to my cart and modify quantities so that I can manage my selections before checking out.
+- **As a shopper**, I want to save items in my cart for later so that I can purchase them when I’m ready.
 
-## 2. User Stories
+### 5. **Checkout and Payment**
+- **As a shopper**, I want to check out using multiple payment methods (credit/debit card, e-wallets, or cash on delivery) so that I can select the most convenient option.
+- **As a shopper**, I want to review my order before making payment so that I can confirm everything is correct.
+- **As a shopper**, I want to receive an order confirmation immediately after placing my order so that I know it was successful.
+- **As a vendor**, I want to receive timely payments for the orders placed by shoppers so that I can manage my finances efficiently.
 
-- **User Story 1**: As a shopper, I want to browse through a variety of clothing categories so that I can find items that suit my taste and needs.
-- **User Story 2**: As a shopper, I want to filter products based on size, color, and price so that I can quickly find what I am looking for.
-- **User Story 3**: As a shopper, I want to add multiple items to my shopping cart so that I can purchase them in one go.
-- **User Story 4**: As a shopper, I want to save my favorite products to a wishlist so that I can purchase them later.
-- **User Story 5**: As a vendor, I want to upload new products to the platform so that I can showcase my inventory to shoppers.
-- **User Story 6**: As a vendor, I want to track my product sales and inventory so that I can manage my stock effectively.
-- **User Story 7**: As an admin, I want to monitor and manage shopper activity on the platform so that I can ensure smooth operations and a positive experience for shoppers.
-- **User Story 8**: As an admin, I want to resolve shopper complaints and issues with orders so that the platform maintains a good reputation.
+### 6. **Order Tracking**
+- **As a shopper**, I want to track my order in real-time so that I know when my delivery will arrive.
+- **As a shopper**, I want to receive updates when my order is shipped, out for delivery, and delivered.
+- **As a vendor**, I want to view all the orders placed for my products so that I can track sales and shipments.
+- **As a vendor**, I want to update the order status (e.g., shipped, delivered) so that shoppers are informed about their order progress.
+- **As a vendor**, I want to process returns and refunds for any orders that require them.
+- **As an admin**, I want to view all orders across the platform to monitor sales and potential issues.
 
----
+### 7. **Order History**
+- **As a shopper**, I want to view my previous orders including the product details and delivery dates so that I can track my purchases.
+- **As a shopper**, I want the option to reorder items from my previous purchases for convenience.
 
-## 3. Use Cases
-# Use Cases for Mynthra 2.0
+### 8. **Customer Support**
+- **As a shopper**, I want to contact customer support easily via email, phone, or live chat so that I can resolve any issues with my order.
+- **As a shopper**, I want access to a help center with FAQs so that I can quickly find solutions to common issues.
+- **As a vendor**, I want to contact Mynthra support for issues related to my products, store management, or order fulfillment.
+- **As an admin**, I want to handle any escalated customer support issues related to orders, refunds, or other platform concerns.
 
-## Use Case 1: Shopper Registers Account
-- **Actors**: Shopper  
-- **Goal**: Enable a new shopper to register on the platform.  
-- **Precondition**: Shopper does not have an existing account.  
-- **Basic Flow**:  
-  1. Shopper clicks on "Sign Up" on the homepage.  
-  2. Shopper provides personal information (name, email, password, etc.).  
-  3. Shopper submits the registration form.  
-  4. System creates a new account for the shopper and logs them in automatically.  
-- **Postcondition**: Shopper has an account and is logged in.  
-- **Exceptions**: If the email is already used, the shopper is asked to use a different email address.
+### 9. **User and Vendor Management**
+- **As an admin**, I want to manage vendor registrations and approve or reject vendor accounts so that only valid vendor can sell products.
+- **As an admin**, I want to manage shopper accounts, including viewing and deactivating accounts if necessary.
 
-## Use Case 2: Shopper Logs into Account
-- **Actors**: Shopper  
-- **Goal**: Allow a registered shopper to log into their account.  
-- **Precondition**: Shopper has an existing account.  
-- **Basic Flow**:  
-  1. Shopper clicks on the "Login" button on the homepage.  
-  2. Shopper enters their email and password.  
-  3. Shopper clicks "Submit".  
-  4. System validates the credentials and grants access.  
-- **Postcondition**: Shopper is logged into their account.  
-- **Exceptions**: If credentials are incorrect, an error message is displayed.
+### 10. **Reporting and Analytics**
+- **As an admin**, I want to generate reports on product performance, order volumes, and revenue to analyze platform success.
+- **As an admin**, I want to view insights into user behavior and platform trends to make informed business decisions.
 
-## Use Case 3: Shopper Browses Products
-- **Actors**: Shopper  
-- **Goal**: Allow the shopper to browse through available products on the platform.  
-- **Precondition**: Shopper is logged in. 
-- **Basic Flow**:  
-  1. Shopper navigates to the homepage or a specific category.  
-  2. Shopper views products displayed, with options to filter or sort by criteria (e.g., price, popularity).  
-  3. Shopper selects a product to view detailed information.  
-- **Postcondition**: Shopper can add the product to the cart or wishlist, or continue browsing.  
-- **Exceptions**: If no products match the filters, a "No results found" message is displayed.
-
-## Use Case 4: Shopper Adds Product to Cart
-- **Actors**: Shopper  
-- **Goal**: Allow the shopper to add products to their shopping cart for future purchase.  
-- **Precondition**: Shopper has browsed and selected a product.  
-- **Basic Flow**:  
-  1. Shopper clicks on a product to view the product details.  
-  2. Shopper selects size, quantity, and other options (if applicable).  
-  3. Shopper clicks "Add to Cart."  
-  4. The product is added to the shopper's cart.  
-- **Postcondition**: The cart is updated with the new item, and the shopper can proceed to checkout or continue shopping.  
-- **Exceptions**: If the product is out of stock or the quantity exceeds available stock, an error message is displayed.
-
-## Use Case 5: Shopper Places an Order
-- **Actors**: Shopper  
-- **Goal**: Enable the shopper to place an order for the items in their cart.  
-- **Precondition**: Shopper has items in their cart and is ready to check out.  
-- **Basic Flow**:  
-  1. Shopper navigates to the cart and reviews the selected products.  
-  2. Shopper clicks "Proceed to Checkout" and selects a delivery address.  
-  3. Shopper chooses a payment method and enters the required details.  
-  4. Shopper confirms the order and completes the payment.  
-- **Postcondition**: The system processes the order, generates a receipt, and the shopper receives an order confirmation.  
-- **Exceptions**: If payment fails, an error message is displayed, and the shopper is prompted to retry or choose a different method.
-
-## Use Case 6: Shopper Tracks an Order
-- **Actors**: Shopper  
-- **Goal**: Allow the shopper to track the status of their placed orders.  
-- **Precondition**: Shopper has successfully placed an order.  
-- **Basic Flow**:  
-  1. Shopper logs into their account and navigates to the "Order History" section.  
-  2. Shopper selects an order to view its status (e.g., confirmed, dispatched, delivered).  
-  3. Shopper receives real-time updates as the order progresses.  
-- **Postcondition**: The shopper can track their order from placement to delivery.  
-- **Exceptions**: If tracking data is unavailable (e.g., due to delays), the system displays a message indicating the delay.
-
-## Use Case 7: Admin Manages Products
-- **Actors**: Admin  
-- **Goal**: Allow the admin to add, edit, or remove products from the platform.  
-- **Precondition**: Admin is logged in.  
-- **Basic Flow**:  
-  1. Admin logs into the admin panel.  
-  2. Admin selects "Manage Products" from the menu.  
-  3. Admin adds a new product or selects an existing product to edit or remove.  
-  4. Admin saves the changes.  
-- **Postcondition**: The product catalog is updated.  
-- **Exceptions**: If an error occurs while saving changes, an error message is displayed.
-
-## Use Case 8: Admin Manages Orders
-- **Actors**: Admin  
-- **Goal**: Enable the admin to view and manage shopper orders.  
-- **Precondition**: Admin is logged in.  
-- **Basic Flow**:  
-  1. Admin logs into the admin panel.  
-  2. Admin selects "Manage Orders" from the menu.  
-  3. Admin reviews order details and updates the order status (e.g., dispatched, delivered).  
-- **Postcondition**: The order status is updated.  
-- **Exceptions**: If an error occurs while updating the order, an error message is displayed.
-
-## Use Case 9: Admin Manages Users
-- **Actors**: Admin  
-- **Goal**: Allow the admin to manage shopper accounts.  
-- **Precondition**: Admin is logged in.  
-- **Basic Flow**:  
-  1. Admin logs into the admin panel.  
-  2. Admin selects "Manage Users" from the menu.  
-  3. Admin views the list of registered shoppers, can deactivate or delete accounts.  
-- **Postcondition**: The admin successfully manages shopper accounts.  
-- **Exceptions**: If an error occurs while managing accounts, an error message is displayed.
-
-## Use Case 10: Shopper Logs Out
-- **Actors**: Shopper  
-- **Goal**: Enable the shopper to log out of their account.  
-- **Precondition**: Shopper is logged in.  
-- **Basic Flow**:  
-  1. Shopper clicks on the "Logout" button in their account menu.  
-  2. Shopper is logged out and redirected to the homepage.  
-- **Postcondition**: Shopper is logged out of the platform.  
-- **Exceptions**: None.
+### 11. **Platform Maintenance**
+- **As an admin**, I want to manage platform settings, such as payment gateway integrations, shipping options, and user permissions to ensure smooth operation.
+- **As an admin**, I want to handle any technical issues that arise on the platform to ensure continuous operation.
 
 ---
 
-## 4. Assumptions and Dependencies
+## User Interface Requirements
 
-- Shoppers, vendor, and admins will have internet access and devices that support a modern web browser.
-- The platform will integrate with third-party payment gateways for order processing.
-- Product availability and inventory will be managed by a single vendor and updated accordingly.
+### 1. **Product Search and Discovery**
+- **Features**:
+  - A prominent search bar with real-time product suggestions.
+  - Filters for sorting by price, rating, brand, and availability.
+  - Personalized product recommendations based on browsing and purchasing history.
+
+### 2. **Product Page**
+- **Features**:
+  - Clear product images, descriptions, pricing, and size options.
+  - Option for shoppers to submit product ratings and reviews.
+  - Real-time stock and size availability information.
+
+### 3. **Shopping Cart and Checkout**
+- **Features**:
+  - Intuitive cart interface displaying product details, quantities, and total price.
+  - Multiple secure payment options.
+  - Review and confirmation screen before completing the order, displaying a breakdown of the selected products and final amount.
+
+### 4. **Order Tracking**
+- **Features**:
+  - A visual status bar or map showing the real-time status of the order.
+  - Notifications for key stages of order processing (shipped, out for delivery, delivered).
+
+### 5. **Customer Support**
+- **Features**:
+  - A help center with easy navigation for common FAQs.
+  - Contact options for live chat, email, and phone support.
 
 ---
 
-## 5. Glossary
+## Conclusion
 
-- **Shopper**: A user who visits the platform to browse or purchase products.
-- **Vendor**: A single vendor or boutique that provides all the products listed for sale on the platform.
-- **Admin**: A user responsible for managing the platform, including overseeing shopper activities, handling complaints, and ensuring smooth operations.
-- **Cart**: A feature where shoppers can store products they intend to purchase.
-- **Wishlist**: A feature allowing shoppers to save products for future purchases.
-- **Checkout**: The process of completing a purchase, including payment and delivery details.
+Mynthra 2.0 aims to provide a seamless and efficient shopping experience for shoppers, vendor, and administrators alike. This document outlines the requirements and user stories to ensure that each user role has the tools and features needed to interact with the platform effectively. With a focus on usability, convenience, and support, Mynthra 2.0 will empower all stakeholders to manage and participate in the shopping ecosystem with ease. The UI requirements further ensure that users can navigate the platform intuitively, while the backend functionality will ensure a smooth and secure operation. By fulfilling these requirements, Mynthra 2.0 will become a reliable and user-friendly platform for all users involved.
