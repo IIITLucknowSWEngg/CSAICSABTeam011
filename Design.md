@@ -117,7 +117,7 @@ APIs enable the frontend to communicate with the backend microservices. Here are
 The following schema highlights the key database tables and collections.
 
 ### **1. PostgreSQL**
-- 7.1 **Users Table**  
+ 7.1 **Users Table**  
   | **Field**      | **Data Type** | **Description**         |
   |----------------|---------------|-------------------------|
   | `user_id`      | INT (PK)      | Unique identifier for each user. |
@@ -125,7 +125,7 @@ The following schema highlights the key database tables and collections.
   | `password`     | VARCHAR(255)  | Hashed user password.   |
   | `role`         | ENUM('admin', 'user') | Role of the user.     |
 
-- 7.2 **Orders Table**  
+ 7.2 **Orders Table**  
   | **Field**      | **Data Type** | **Description**         |
   |----------------|---------------|-------------------------|
   | `order_id`     | INT (PK)      | Unique identifier for each order. |
