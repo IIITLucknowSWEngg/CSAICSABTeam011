@@ -177,6 +177,59 @@ Admin --> [Admin Panel]
 @enduml
 
 ```
+actor Shopper
+```
+title Shopper Component - Myntra 2.0
+
+
+package "Myntra App" {
+    component "Shopper Component" as Shopper {
+        interface "Register Account" as Register
+        interface "Login" as Login
+        interface "Browse Products" as BrowseProducts
+        interface "Manage Cart" as ManageCart
+        interface "Place Order" as PlaceOrder
+        interface "Track Orders" as TrackOrders
+        interface "Rate and Review" as RateReview
+        
+        Shopper --> Register
+        Shopper --> Login
+        Shopper --> BrowseProducts
+        Shopper --> ManageCart
+        Shopper --> PlaceOrder
+        Shopper --> TrackOrders
+        Shopper --> RateReview
+    }
+}
+
+package "External Systems" {
+    component "Payment Gateway" as PaymentGateway
+    component "Logistics System" as LogisticsSystem
+    component "Notification Service" as NotificationService
+    component "Authentication Service" as AuthService
+    component "Database" as Database
+    component "Recommendation Engine" as RecommendationEngine
+}
+
+Register --> AuthService : OTP Verification
+Login --> AuthService : Credential Validation
+BrowseProducts --> RecommendationEngine : Personalized Suggestions
+ManageCart --> Database : Update Cart Details
+PlaceOrder --> PaymentGateway : Payment Processing
+TrackOrders --> LogisticsSystem : Shipment Status
+RateReview --> Database : Store Feedback
+
+@enduml
+
+
+
+```
+actor Vendor
+```
+```
+actor Admin
+````
+````
 #deployement diagram 
 ```
  @startuml
