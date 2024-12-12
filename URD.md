@@ -37,7 +37,7 @@ This document outlines the user requirements for Myntra 2.0, an e-commerce platf
 - **Age**: 35  
 - **Occupation**: Boutique Owner  
 - **Tech Skills**: Low  
-- **Needs**: As the sole vendor on the platform, Priya needs a straightforward way to upload new products, manage inventory, track orders, and monitor product performance. Priya relies on a simple dashboard to view sales and customer feedback.
+- **Needs**: Needs a straightforward way to upload new products, manage inventory, track orders, and monitor product performance. Priya relies on a simple dashboard to view sales and customer feedback.
 
 ### Persona 4: Admin
 - **Name**: Arjun  
