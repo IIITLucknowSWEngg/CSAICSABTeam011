@@ -326,11 +326,186 @@ describe('Order Tracking', function() {
   });
 });
 ```
+--- 
 
 
 
-   
+# Feature: Vendor Login
+## Scenario: Vendor logs in with valid credentials
+### Given:
+The Vendor is on the login page.
 
+### When:
+The Vendor enters valid credentials (email, password).
+
+### Then:
+
+The Vendor should be successfully logged in.
+The Vendor should be redirected to the vendor dashboard.
+### Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const loginPage = require('../pages/vendorLoginPage');
+
+describe('Vendor Login', function() {
+  it('should login vendor successfully', function() {
+    loginPage.open();
+    loginPage.enterCredentials('vendorA@example.com', 'vendorPassword123');
+    loginPage.submitLogin();
+    expect(loginPage.getWelcomeMessage()).to.include('Welcome, Vendor A');
+    expect(browser.getUrl()).to.include('/vendor/dashboard');
+  });
+});
+```
+
+# Feature: Vendor Product Catalog Management
+## Scenario: Vendor adds a new product to the catalog
+### Given:
+The Vendor is on the product management page.
+
+### When:
+The Vendor adds a new product (name, description, price, stock quantity).
+
+### Then:
+
+The product should be successfully added to the catalog.
+The product should be visible on the vendor’s product list.
+
+### Chai.js Code:
+```javascript
+
+const chai = require('chai');
+const expect = chai.expect;
+const productPage = require('../pages/vendorProductPage');
+
+describe('Vendor Product Catalog Management', function() {
+  it('should add product to the catalog successfully', function() {
+    productPage.open();
+    productPage.addProduct('New Shoes', 'Comfortable running shoes', 50, 100);
+    expect(productPage.getProductList()).to.include('New Shoes');
+  });
+});
+```
+
+
+# Feature: Vendor Order Management
+## Scenario: Vendor views order details
+### Given:
+The Vendor is on the vendor order management page.
+
+### When:
+The Vendor selects an order ID to view details.
+
+### Then:
+
+The Vendor should see the order details, including the customer’s products.
+
+### Chai.js Code:
+```javascript
+   const chai = require('chai');
+const expect = chai.expect;
+const orderPage = require('../pages/vendorOrderPage');
+
+describe('Vendor Order Management', function() {
+  it('should display vendor order details successfully', function() {
+    orderPage.open();
+    orderPage.viewOrderDetails('ORD123456');
+    expect(orderPage.getOrderDetails()).to.include('Product: Running Shoes');
+    expect(orderPage.getOrderStatus()).to.equal('Shipped');
+  });
+});
+```
+---
+
+
+
+# Feature: Admin Registration in App
+## Scenario: Admin registers successfully
+### Given:
+The Admin is on the registration page.
+
+### When:
+The Admin enters valid information (name, email, password).
+
+### Then:
+
+The Admin should be successfully registered.
+The Admin should be redirected to the login page.
+
+### Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const registrationPage = require('../pages/adminRegistrationPage');
+
+describe('Admin Registration', function() {
+  it('should register admin successfully', function() {
+    registrationPage.open();
+    registrationPage.fillRegistrationForm('Admin User', 'admin@example.com', 'adminPassword123');
+    registrationPage.submitForm();
+    expect(registrationPage.getSuccessMessage()).to.equal('Admin registration successful');
+    expect(browser.getUrl()).to.include('/admin/login');
+  });
+});
+```
+
+# Feature: Admin Login
+## Scenario: Admin logs in with valid credentials
+### Given:
+The Admin is on the login page.
+
+### When:
+The Admin enters valid credentials (email, password).
+
+### Then:
+
+The Admin should be successfully logged in.
+The Admin should be redirected to the admin dashboard.
+### Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const loginPage = require('../pages/adminLoginPage');
+
+describe('Admin Login', function() {
+  it('should login admin successfully', function() {
+    loginPage.open();
+    loginPage.enterCredentials('admin@example.com', 'adminPassword123');
+    loginPage.submitLogin();
+    expect(loginPage.getWelcomeMessage()).to.include('Welcome, Admin User');
+    expect(browser.getUrl()).to.include('/admin/dashboard');
+  });
+});
+```
+
+# Feature: Admin Order Management
+## Scenario: Admin views the details of an order
+### Given:
+The Admin is on the order management page.
+
+### When:
+The Admin selects an order ID to view details.
+
+### Then:
+
+The Admin should see the order details, including customer information and product list.
+
+### Chai.js Code:
+```javascript
+const chai = require('chai');
+const expect = chai.expect;
+const orderPage = require('../pages/adminOrderPage');
+
+describe('Admin Order Management', function() {
+  it('should display order details successfully', function() {
+    orderPage.open();
+    orderPage.viewOrderDetails('ORD123456');
+    expect(orderPage.getOrderDetails()).to.include('Customer: Jane Doe');
+    expect(orderPage.getOrderStatus()).to.equal('Shipped');
+  });
+});
+```
 
 
 
