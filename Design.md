@@ -69,17 +69,17 @@ This section outlines how data flows within the system:
 ## 5. User Interface Design
 The UI follows a **mobile-first approach** to ensure a seamless user experience across devices. Below are the main pages and their components:
 
-### **1. Homepage**
+5.1 **Homepage**
 - **Header**: Search bar, category navigation, and login/cart icons.  
 - **Product Grid**: List of products with images, prices, and "Add to Cart" buttons.  
 - **Footer**: Links to terms, privacy policy, and support.  
 
-### **2. Product Detail Page**
+5.2 **Product Detail Page**
 - **Image Gallery**: Shows multiple views of the product.  
 - **Product Info**: Name, price, size, color, and availability.  
 - **Add to Cart**: Button to add the product to the cart.  
 
-### **3. Cart/Checkout Page**
+5.3 **Cart/Checkout Page**
 - **Product List**: Items in the cart with options to edit quantity or remove.  
 - **Order Summary**: Total cost, taxes, and delivery charges.  
 - **Payment Gateway**: Options to pay via UPI, card, or wallet.  
