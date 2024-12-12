@@ -15,11 +15,11 @@
 
 ## 1.3 Component Diagram
 ![component  diagram](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/component%20diagram.png)
- Shopper Component Diagram
+ 1.3.1 Shopper Component Diagram
  ![shopper component diagram](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/Shopper%20component%20diagram.png)
- Admin Component Diagram
+ 1.3.2 Admin Component Diagram
  ![admin](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/Admin%20component%20diagram.png)
- Vendor Component Diagram
+ 1.3.3 Vendor Component Diagram
  ![Vendor](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/Vendor%20Component%20Diagram.png)
  
 
