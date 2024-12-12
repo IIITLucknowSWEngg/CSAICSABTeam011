@@ -1,6 +1,6 @@
 # Project Overview
 
-Myntra is a prominent fashion and lifestyle e-commerce platform that offers a vast selection of clothing, accessories, footwear, and other lifestyle products. With its user-friendly interface, Myntra allows customers to browse through products, filter by categories, and make purchases seamlessly. The platform supports personalized recommendations, multiple payment options, and real-time order tracking, enhancing the shopping experience for users.
+Myntra is a prominent fashion and lifestyle e-commerce platform that offers a vast selection of clothing, accessories, footwear, and other lifestyle products. With its user-friendly interface, Myntra allows customers to browse through products, filter by categories, and make purchases seamlessly. The platform supports multiple payment options, and real-time order tracking, enhancing the shopping experience for users.
 
 ---
 
@@ -57,7 +57,6 @@ Myntra is a prominent fashion and lifestyle e-commerce platform that offers a va
    - Push notifications for:
      - Order updates.
      - Promotions.
-     - Personalized offers.
    - Email and SMS notifications for:
      - Order confirmations.
      - Delivery updates.
@@ -73,26 +72,13 @@ Myntra is a prominent fashion and lifestyle e-commerce platform that offers a va
      - Like or dislike reviews.
    - Vendors can respond to reviews, fostering interaction.
 
-### 9. **Loyalty Programs and Discounts**:
-   - Implement features like:
-     - Loyalty points for frequent users.
-     - Promo codes and discounts for first-time users and special occasions.
-     - Referral system for users to earn rewards by inviting friends.
-
-### 10. **Customer Support**:
-   - Provide in-app customer support chat and a help center.
-   - Enable users to manage:
-     - Order cancellations.
-     - Refund requests.
-   - FAQs and support articles for common issues.
-
-### 11. **Responsive Design**:
+### 9. **Responsive Design**:
    - Ensure the platform offers a seamless user experience across:
      - Desktop.
      - Mobile devices.
      - Tablets.
 
-### 12. **Multi-Platform Support**:
+### 10. **Multi-Platform Support**:
    - Develop:
      - A responsive web application.
      - Native mobile applications for Android and iOS.
