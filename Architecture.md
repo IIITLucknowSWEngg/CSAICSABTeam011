@@ -8,7 +8,7 @@
 
 
 ## 3. Component Diagram
-![component  diagram](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/plantuml.png)
+![component  diagram](https://raw.githubusercontent.com/IIITLucknowSWEngg/CSAICSABTeam011/main/component%20diagram.png)
 
 
 ## 4. Deployment Diagram
