@@ -162,24 +162,25 @@ The system will integrate with the following external services:
 
 ---
 ## 5. Functional Requirements for Order History
+### For users
 ### 5.1  View Order History:
 
-### 5.2  Users should be able to view their past orders after logging into their account.
-### 5.3  Each order entry should display:
+-   Users should be able to view their past orders after logging into their account.
+-  Each order entry should display:
 - Order ID
 - Product details (name, image, size, quantity)
 - Order date and time
 - Order status (e.g., Delivered, Pending, Cancelled)
 - Total amount paid
 - Orders should be listed in reverse chronological order.
-### 5.4 Order Details:
+### 5.2 Order Details:
 
 - Users should be able to click on an individual order to view more details, such as:
 - Shipping address
 - Payment method
 - Tracking information
 - Estimated delivery date
-### 5.5 Search and Filter:
+### 5.3 Search and Filter:
 
 - Provide functionality to search for specific orders by:
 - Product name
@@ -187,44 +188,90 @@ The system will integrate with the following external services:
 - Filter orders by:
 - Order status
 - Date range
-### 5.6 Reorder:
+### 5.4 Reorder:
 
 - Allow users to reorder products directly from their order history.
-### 5.7 Cancel Order:
+### 5.5 Cancel Order:
 
 - Users can cancel an order if it's still in a "Processing" state.
+ ###  For Vendors:
+### 5.7 View Sales History:
+
+Vendors can view the list of orders placed for their products.
+Details should include:
+Order ID
+Product details (name, size, quantity)
+Total amount earned
+Order status
+### 5.8 Order Management:
+
+Vendors can update the order status (e.g., Processing, Shipped, Delivered, Cancelled).
+### 5.9 Analytics:
+
+Vendors can view summarized data, such as:
+Total sales
+Most sold products
+Revenue trends over time
+
+---
+
 ## 6. Non-Functional Requirements
 ### 6.1 Performance:
 
-The order history page should load within 2 seconds, even for users with extensive order records.
+The Order History and Vendor Sales pages should load within 2 seconds, even with a large dataset
 ### 6.2 Scalability:
 
-The system should handle a large number of orders per user without degrading performance.
+The system should support multiple shoppers and vendors with high volumes of data without degradation in performance.
 ### 6.3 Data Integrity:
 
 Ensure that the order details displayed are consistent with the database records.
 ### 6.4 Security:
 
-Only authenticated users can access their order history.
-Sensitive information, such as payment details, should be displayed partially or encrypted.
+- Only authenticated shoppers and vendors can access their respective data.
+- Sensitive information, such as payment details, should be displayed partially or encrypted.
+  
+---
+  
 ## 7. Database Design Considerations
-In the "Database Schema" section of your SRS, you could mention how you will store order history:
 
-### 7.1 Orders Table:
 
-- order_id (Primary Key)
-- user_id (Foreign Key)
-- product_id (Foreign Key)
-- quantity
-- total_price
-- order_date
-- order_status
-### 7.3  Order Details Table (if needed):
+-- Orders Table
+CREATE TABLE Orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    vendor_id INT NOT NULL,
+    quantity INT NOT NULL,
+    total_price DECIMAL(10, 2) NOT NULL,
+    order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    order_status ENUM('Processing', 'Shipped', 'Delivered', 'Cancelled') NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (product_id) REFERENCES Products(product_id),
+    FOREIGN KEY (vendor_id) REFERENCES Vendors(vendor_id)
+);
 
-- order_id (Foreign Key)
-- shipping_address
-- payment_method
-- tracking_info
+-- Order Details Table
+CREATE TABLE OrderDetails (
+    order_id INT NOT NULL,
+    shipping_address VARCHAR(255) NOT NULL,
+    payment_method ENUM('Credit Card', 'Debit Card', 'Net Banking', 'COD') NOT NULL,
+    tracking_info VARCHAR(255),
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id)
+);
+
+-- Vendors Table
+CREATE TABLE Vendors (
+    vendor_id INT AUTO_INCREMENT PRIMARY KEY,
+    vendor_name VARCHAR(100) NOT NULL,
+    contact_email VARCHAR(100) NOT NULL UNIQUE,
+    total_earnings DECIMAL(15, 2) DEFAULT 0
+);
+
+-- Update Products Table to include vendor_id
+ALTER TABLE Products
+ADD COLUMN vendor_id INT NOT NULL,
+ADD FOREIGN KEY (vendor_id) REFERENCES Vendors(vendor_id);
+
 
 
 
