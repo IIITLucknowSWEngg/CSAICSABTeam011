@@ -69,7 +69,7 @@ The Mynthra platform will operate on web browsers and mobile applications (Andro
 
 ---
 
-## 3. System Features
+## 3. Use Cases
 
 ### 3.1 User Registration and Authentication
 Description: Shoppers, Vendor, and Admins will be able to create accounts, log in, and manage their profiles securely.
@@ -293,6 +293,8 @@ CREATE TABLE OrderDetails (
 - The system relies on third-party services for payment processing and shipping integration. Any downtime or outages from these services will be managed through fallback mechanisms or error notifications.
 
 ---
+
+
 
 ## 9. Conclusion
 This document defines the functional and non-functional requirements for the Mynthra e-commerce platform. It ensures that the development team can build the platform according to user expectations and business objectives.
