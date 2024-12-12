@@ -162,7 +162,7 @@ The system will integrate with the following external services:
 
 ---
 ## 5. Functional Requirements for Order History
-### For shopkeepers
+
 ### 5.1  View Order History:
 
 -  Shopkeepers should be able to view their past orders after logging into their account.
@@ -194,31 +194,12 @@ The system will integrate with the following external services:
 ### 5.5 Cancel Order:
 
 - Shopkeepers can cancel an order if it's still in a "Processing" state.
- ###  For Vendors:
-### 5.7 View Sales History:
 
-Vendors can view the list of orders placed for their products.
-Details should include:
-Order ID
-Product details (name, size, quantity)
-Total amount earned
-Order status
-### 5.8 Order Management:
-
-Vendors can update the order status (e.g., Processing, Shipped, Delivered, Cancelled).
-### 5.9 Analytics:
-
-Vendors can view summarized data, such as:
-Total sales
-Most sold products
-Revenue trends over time
-
----
 
 ## 6. Non-Functional Requirements
 ### 6.1 Performance:
 
-The Order History and Vendor Sales pages should load within 2 seconds, even with a large dataset
+The Order History pages should load within 2 seconds, even with a large dataset
 ### 6.2 Scalability:
 
 The system should support multiple shoppers and vendors with high volumes of data without degradation in performance.
@@ -227,7 +208,7 @@ The system should support multiple shoppers and vendors with high volumes of dat
 Ensure that the order details displayed are consistent with the database records.
 ### 6.4 Security:
 
-- Only authenticated shoppers and vendors can access their respective data.
+- Only authenticated shoppers  can access their respective data.
 - Sensitive information, such as payment details, should be displayed partially or encrypted.
   
 ---
@@ -259,18 +240,6 @@ CREATE TABLE OrderDetails (
     FOREIGN KEY (order_id) REFERENCES Orders(order_id)
 );
 
--- Vendors Table
-CREATE TABLE Vendors (
-    vendor_id INT AUTO_INCREMENT PRIMARY KEY,
-    vendor_name VARCHAR(100) NOT NULL,
-    contact_email VARCHAR(100) NOT NULL UNIQUE,
-    total_earnings DECIMAL(15, 2) DEFAULT 0
-);
-
--- Update Products Table to include vendor_id
-ALTER TABLE Products
-ADD COLUMN vendor_id INT NOT NULL,
-ADD FOREIGN KEY (vendor_id) REFERENCES Vendors(vendor_id);
 
 
 ```
