@@ -72,7 +72,6 @@ System_Ext(sms_email, "SMS/Email Notifications", "Order confirmations and update
 Rel(shopper, web, "Uses", "HTTPS")
 Rel(shopper, mobile, "Uses", "HTTPS")
 Rel(vendor, web, "Uses", "HTTPS")
-Rel(vendor, mobile, "Uses", "HTTPS")
 Rel(admin, web, "Uses", "HTTPS")
 
 Rel(web, api, "Uses", "HTTPS")
