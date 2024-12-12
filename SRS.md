@@ -3,10 +3,10 @@
 ## 1. Introduction
 
 ### 1.1 Purpose
-This Software Requirements Specification (SRS) document outlines the functional and non-functional requirements for the Myntra e-commerce platform. It serves as a guide for developers, testers, and stakeholders throughout the software development lifecycle, ensuring the platform meets the needs of shoppers, vendor, and administrators.
+This Software Requirements Specification (SRS) document outlines the functional and non-functional requirements for the Mynthra e-commerce platform. It serves as a guide for developers, testers, and stakeholders throughout the software development lifecycle, ensuring the platform meets the needs of shoppers, vendor, and administrators.
 
 ### 1.2 Scope
-The Myntra e-commerce platform enables users to browse, purchase, and manage products such as clothing, footwear, and accessories. The system will handle user registration, product browsing, order placement, payment processing, and order tracking. This SRS covers the functional and non-functional requirements, user interfaces, external interfaces, and design constraints for the development and implementation of Myntra.
+The Mynthra e-commerce platform enables users to browse, purchase, and manage products such as clothing, footwear, and accessories. The system will handle user registration, product browsing, order placement, payment processing, and order tracking. This SRS covers the functional and non-functional requirements, user interfaces, external interfaces, and design constraints for the development and implementation of Mynthra.
 
 ### 1.3 Definitions, Acronyms, and Abbreviations
 - SRS: Software Requirements Specification  
@@ -25,14 +25,14 @@ The Myntra e-commerce platform enables users to browse, purchase, and manage pro
 - User Requirements Document
 
 ### 1.5 Overview
-This document is structured into several sections that define the system's overall description, functional and non-functional requirements, external interfaces, and design constraints relevant to the development of the Myntra platform.
+This document is structured into several sections that define the system's overall description, functional and non-functional requirements, external interfaces, and design constraints relevant to the development of the Mynthra platform.
 
 ---
 
 ## 2. Overall Description
 
 ### 2.1 Product Perspective
-The Myntra platform is an e-commerce system designed to operate on both mobile and desktop devices. It interfaces with external systems such as payment gateways, inventory management systems, and third-party APIs for logistics and shipping. The platform will be modular in design, allowing for easy scaling and feature expansion.
+The Mynthra platform is an e-commerce system designed to operate on both mobile and desktop devices. It interfaces with external systems such as payment gateways, inventory management systems, and third-party APIs for logistics and shipping. The platform will be modular in design, allowing for easy scaling and feature expansion.
 
 ### 2.2 Product Functions
 - User registration and authentication.  
@@ -48,7 +48,7 @@ The Myntra platform is an e-commerce system designed to operate on both mobile a
 - Admins: Individuals managing the platform, overseeing user, vendor, and order activities.
 
 ### 2.4 Operating Environment
-The Myntra platform will operate on web browsers and mobile applications (Android and iOS). It requires internet connectivity for functionalities such as product browsing, checkout, and order tracking. The backend will be hosted on cloud services for high availability and scalability.
+The Mynthra platform will operate on web browsers and mobile applications (Android and iOS). It requires internet connectivity for functionalities such as product browsing, checkout, and order tracking. The backend will be hosted on cloud services for high availability and scalability.
 
 - Web Browsers: The platform supports the latest versions of popular web browsers, including Chrome, Firefox, Safari, and Microsoft Edge.
 - Mobile Applications:
@@ -160,34 +160,215 @@ The system will integrate with the following external services:
 - The platform will use secure HTTPS protocols to protect user data.
 - It will use WebSocket for real-time notifications (e.g., order status updates, shipment tracking updates).
 
+# 5. Use Cases
+
+## 5.1 Use Case: Shoppers Registration
+*Primary Actor:* New Shopper  
+*Preconditions:* Shopper has a valid email address  
+
+*Main Flow:*
+1. Shopper navigates to the registration page.
+2. Shopper enters personal details (name, email, password).
+3. System validates input.
+4. System creates a shopper account.
+5. System sends a verification email.
+6. Shopper verifies the email.
+7. Shopper can now log in.
+
+*Alternative Flow:*
+- If input is invalid (e.g., email format is incorrect), the system prompts the shopper to correct the input.
+- If email verification fails, the system prompts the shopper to resend the verification email.
+
+## 5.2 Use Case: Shoppers Login
+*Primary Actor:* Registered Shopper  
+*Preconditions:* Shopper has a verified account  
+
+*Main Flow:*
+1. Shopper enters email and password.
+2. System validates credentials.
+3. System generates authentication token and logs the shopper in.
+4. Shopper is redirected to the homepage or dashboard.
+
+*Alternative Flow:*
+- If credentials are incorrect, the system prompts the shopper to re-enter the details or reset the password.
+
+## 5.3 Use Case: Product Catalog Browsing
+*Primary Actor:* Shopper  
+*Preconditions:* Shopper is logged in  
+
+*Main Flow:*
+1. Shopper navigates to the product catalog.
+2. Shopper filters products by categories, brand, size, or price range.
+3. System displays the filtered list of products with details (price, description, SKU).
+4. Shopper selects a product to view details.
+
+*Alternative Flow:*
+- If no products match the filters, the system displays a message indicating no results found.
+
+## 5.4 Use Case: Shopping Cart Management
+*Primary Actor:* Shopper  
+*Preconditions:* Shopper has at least one product in their cart  
+
+*Main Flow:*
+1. Shopper adds items to the shopping cart.
+2. System updates the cart with the added item.
+3. Shopper views the cart and can modify the quantity or remove items.
+4. Shopper proceeds to checkout.
+
+*Alternative Flow:*
+- If the shopper tries to remove an item that is not in the cart, the system displays a message stating the item is not in the cart.
+
+## 5.5 Use Case: Order Placement
+*Primary Actor:* Shopper  
+*Preconditions:* Shopper has items in the cart  
+
+*Main Flow:*
+1. Shopper proceeds to checkout.
+2. Shopper reviews the order summary (items, price, shipping).
+3. Shopper enters shipping details.
+4. Shopper selects a payment method and enters payment details.
+5. System processes the payment.
+6. System confirms the order and sends an email confirmation to the shopper.
+
+*Alternative Flow:*
+- If payment fails, the system prompts the shopper to retry or use a different payment method.
+
+## 5.6 Use Case: Payment Processing
+*Primary Actor:* Shopper  
+*Preconditions:* Shopper has placed an order and provided payment details  
+
+*Main Flow:*
+1. Shopper selects a payment method (credit card, PayPal, etc.).
+2. Shopper enters payment details (card number, CVV, etc.).
+3. System validates payment details.
+4. System processes the payment with the selected payment gateway.
+5. System confirms payment success and proceeds to order confirmation.
+
+*Alternative Flow:*
+- If the payment fails, the system prompts the shopper to retry or use a different payment method.
+
+## 5.7 Use Case: Order Tracking
+*Primary Actor:* Shopper  
+*Preconditions:* Shopper has placed an order  
+
+*Main Flow:*
+1. Shopper navigates to the order tracking page.
+2. Shopper selects an order to view the status.
+3. System displays the order’s current status (e.g., processing, shipped, delivered).
+4. System provides an estimated delivery time and tracking information (if available).
+
+*Alternative Flow:*
+- If the order has not shipped yet, the system shows an estimated processing time.
+
+## 5.8 Use Case: Vendor Login
+*Primary Actor:* Registered Vendor  
+*Preconditions:* Vendor has a verified account  
+
+*Main Flow:*
+1. Vendor enters email and password.
+2. System validates credentials.
+3. System generates authentication token and logs the vendor in.
+4. Vendor is redirected to the vendor dashboard.
+
+*Alternative Flow:*
+- If credentials are incorrect, the system prompts the vendor to re-enter the details or reset the password.
+
+## 5.9 Use Case: Vendor Product Catalog Management
+*Primary Actor:* Vendor  
+*Preconditions:* Vendor is logged in  
+
+*Main Flow:*
+1. Vendor navigates to the product catalog management page.
+2. Vendor adds, updates, or removes products.
+3. Vendor manages product details (name, price, description, quantity).
+4. Vendor saves the changes, and the product catalog is updated.
+
+*Alternative Flow:*
+- If required fields are missing (e.g., product name or price), the system prompts the vendor to complete the form.
+
+## 5.10 Use Case: Vendor Order Management
+*Primary Actor:* Vendor  
+*Preconditions:* Vendor is logged in  
+
+*Main Flow:*
+1. Vendor navigates to the order management page.
+2. Vendor reviews orders placed by shoppers.
+3. Vendor can update the order status (e.g., processing, shipped).
+4. Vendor can cancel orders or issue refunds.
+
+*Alternative Flow:*
+- If the vendor attempts to update an order status that is already completed (e.g., delivered), the system prevents the update and shows an error message.
+
+## 5.11 Use Case: Admin Registration in App
+*Primary Actor:* Admin  
+*Preconditions:* Admin has valid registration details  
+
+*Main Flow:*
+1. Admin navigates to the registration page.
+2. Admin enters personal details (name, email, password).
+3. System validates input.
+4. System creates an admin account.
+5. System sends a verification email.
+6. Admin verifies the email and completes registration.
+
+*Alternative Flow:*
+- If the input is invalid (e.g., email format is incorrect), the system prompts the admin to correct the input.
+- If email verification fails, the system prompts the admin to resend the verification email.
+
+## 5.12 Use Case: Admin Login
+*Primary Actor:* Admin  
+*Preconditions:* Admin has a verified account  
+
+*Main Flow:*
+1. Admin enters email and password.
+2. System validates credentials.
+3. System generates authentication token and logs the admin in.
+4. Admin is redirected to the admin dashboard.
+
+*Alternative Flow:*
+- If credentials are incorrect, the system prompts the admin to re-enter the details or reset the password.
+
+## 5.13 Use Case: Admin Order Management
+*Primary Actor:* Admin  
+*Preconditions:* Admin is logged in  
+
+*Main Flow:*
+1. Admin navigates to the order management page.
+2. Admin reviews orders placed by shoppers.
+3. Admin can update the order status (e.g., processing, shipped).
+4. Admin can cancel orders or issue refunds.
+
+*Alternative Flow:*
+- If the admin attempts to update an order status that is already completed (e.g., delivered), the system prevents the update and shows an error message.
+
 ---
 
-## 5. Non-Functional Requirements
+## 6. Non-Functional Requirements
 
-### 5.1 Performance
+### 6.1 Performance
 - The platform should load pages within 3 seconds under typical network conditions (e.g., 3G or Wi-Fi).
 - The system must handle up to 1000 concurrent users without performance degradation.
 
-### 5.2 Security
+### 6.2 Security
 - Data shall be encrypted in transit (TLS) and at rest (AES-256).
 - The system shall enforce strong password policies and support multi-factor authentication.
 
-### 5.3 Usability
+### 6.3 Usability
 - The app and website shall follow WCAG 2.1 accessibility guidelines.
 
-### 5.4 Scalability
+### 6.4 Scalability
 - The system must support future growth in terms of both user base and product listings without significant performance issues.
 
-### 5.5 Reliability
+### 6.5 Reliability
 - The platform must ensure an uptime of 99.9%, with minimal downtime for maintenance.
 
 ---
 
-## 6. Assumptions and Dependencies
+## 7. Assumptions and Dependencies
 - The platform assumes that shoppers will have access to modern web browsers and smartphones with internet connectivity.
 - The system relies on third-party services for payment processing and shipping integration. Any downtime or outages from these services will be managed through fallback mechanisms or error notifications.
 
 ---
 
-## 7. Conclusion
+## 8. Conclusion
 This document defines the functional and non-functional requirements for the Mynthra e-commerce platform. It ensures that the development team can build the platform according to user expectations and business objectives.
