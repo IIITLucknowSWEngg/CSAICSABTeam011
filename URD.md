@@ -47,21 +47,27 @@ This document defines the requirements and expectations for users of the Mynthra
 - **As a shopper**, I want to view my previous orders including the product details and delivery dates so that I can track my purchases.
 - **As a shopper**, I want the option to reorder items from my previous purchases for convenience.
 
-### 2.8 Customer Support
+### 2.8 Payment History
+- **As a shopper**, I want to view my payment history including past transactions and payment methods used so that I can track my spending and purchases.
+- **As a vendor**, I want to view a payment history of all completed transactions so that I can manage my revenue and reconcile finances.
+- **As an admin**, I want to access payment history for all transactions to ensure the accuracy of financial records and platform operations.
+  
+
+### 2.9 Customer Support
 - **As a shopper**, I want to contact customer support easily via email, phone, or live chat so that I can resolve any issues with my order.
 - **As a shopper**, I want access to a help center with FAQs so that I can quickly find solutions to common issues.
 - **As a vendor**, I want to contact Mynthra support for issues related to my products, store management, or order fulfillment.
 - **As an admin**, I want to handle any escalated customer support issues related to orders, refunds, or other platform concerns.
 
-### 2.9 User and Vendor Management
+### 2.10 User and Vendor Management
 - **As an admin**, I want to manage vendor registrations and approve or reject vendor accounts so that only valid vendor can sell products.
 - **As an admin**, I want to manage shopper accounts, including viewing and deactivating accounts if necessary.
 
-### 2.10 Reporting and Analytics
+### 2.11 Reporting and Analytics
 - **As an admin**, I want to generate reports on product performance, order volumes, and revenue to analyze platform success.
 - **As an admin**, I want to view insights into user behavior and platform trends to make informed business decisions.
 
-### 2.11 Platform Maintenance
+### 2.12 Platform Maintenance
 - **As an admin**, I want to manage platform settings, such as payment gateway integrations, shipping options, and user permissions to ensure smooth operation.
 - **As an admin**, I want to handle any technical issues that arise on the platform to ensure continuous operation.
 
