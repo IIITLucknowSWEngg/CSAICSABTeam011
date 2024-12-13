@@ -15,6 +15,8 @@ This document outlines the AI systems used during the development of Mynthra 2.0
 **Prompt 1:**  "Create a System Context Diagram for Mynthra 2.0, showing key stakeholders (Shoppers, Vendors, Admins) and external systems (Payment Gateway, Logistics API, SMS/Email Service, Inventory, Analytics). Illustrate their interactions with the platform, such as browsing, purchasing, product management, payments, and delivery tracking."
 
 **Prompt 2:** "Create a Container Diagram for Mynthra 2.0, showing key components like Web App, Mobile App, API Gateway, and backend services (Product, User, Cart, Order, Payment, etc.). Include databases (MongoDB, PostgreSQL), external systems (Payment Gateway, Logistics API, SMS/Email), and illustrate how these components interact through APIs, databases, and message queues.
+**Prompt 3:** "component diagram for vendor and admin and shopper  for myntra app give plant uml code in heavy details"
+**Prompt 4:** "create deployement diagram for myntra app*
 
 **File Name:** `test.md` 
 
@@ -40,6 +42,11 @@ Use Cases: Provide use cases for shoppers, vendors, and admins, focusing on prec
 Non-Functional Requirements: Highlight performance, security, scalability, and usability needs.
 Conclusion: Summarize the document’s objective and relevance.
 Make the content clear, professional, and concise, ensuring all stakeholders understand the platform's requirements."
+
+**File Name:** `Project.md`
+**Prompt:**
+"give refference how to make project md for a clone"
+**Prompt:** "check and fix spelling mistakes" 
 
 ## Engineering Blogs
 https://tech.myntra.com/
