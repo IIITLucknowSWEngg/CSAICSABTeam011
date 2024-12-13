@@ -28,6 +28,19 @@ This document outlines the AI systems used during the development of Mynthra 2.0
 
 **Prompt:**  "Develop a Cross Reference Matrix for Myntra 2.0, showing the relationships between requirements and the corresponding test cases, ensuring traceability and full coverage during testing. Represent this in a tabular format."
 
+**File Name:** `SRS.md`
+
+**Prompt:**  "Write a concise Software Requirements Specification (SRS) document for an e-commerce platform named 'Mynthra.' Follow the IEEE SRS format and include the following sections:
+
+Introduction: Briefly describe the purpose, scope, and key definitions.
+Overall Description: Summarize the product perspective, main functions, user types, operating environment, and constraints.
+System Features: List key features (e.g., user registration, product browsing, payment processing) with functional requirements.
+External Interfaces: Outline user, hardware, software, and communication interfaces.
+Use Cases: Provide use cases for shoppers, vendors, and admins, focusing on preconditions and main flows.
+Non-Functional Requirements: Highlight performance, security, scalability, and usability needs.
+Conclusion: Summarize the document’s objective and relevance.
+Make the content clear, professional, and concise, ensuring all stakeholders understand the platform's requirements."
+
 ## Engineering Blogs
 https://tech.myntra.com/
 
