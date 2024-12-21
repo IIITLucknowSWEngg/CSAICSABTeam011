@@ -163,10 +163,10 @@ The system will integrate with the following external services:
 # 5. Use Cases
 
 ## 5.1 Use Case: Shoppers Registration
-*Primary Actor:* New Shopper  
-*Preconditions:* Shopper has a valid email address  
+Primary Actor: New Shopper  
+Preconditions: Shopper has a valid email address  
 
-*Main Flow:*
+Main Flow:
 1. Shopper navigates to the registration page.
 2. Shopper enters personal details (name, email, password).
 3. System validates input.
@@ -175,54 +175,54 @@ The system will integrate with the following external services:
 6. Shopper verifies the email.
 7. Shopper can now log in.
 
-*Alternative Flow:*
+Alternative Flow:
 - If input is invalid (e.g., email format is incorrect), the system prompts the shopper to correct the input.
 - If email verification fails, the system prompts the shopper to resend the verification email.
 
 ## 5.2 Use Case: Shoppers Login
-*Primary Actor:* Registered Shopper  
-*Preconditions:* Shopper has a verified account  
+Primary Actor: Registered Shopper  
+Preconditions: Shopper has a verified account  
 
-*Main Flow:*
+Main Flow:
 1. Shopper enters email and password.
 2. System validates credentials.
 3. System generates authentication token and logs the shopper in.
 4. Shopper is redirected to the homepage or dashboard.
 
-*Alternative Flow:*
+Alternative Flow:
 - If credentials are incorrect, the system prompts the shopper to re-enter the details or reset the password.
 
 ## 5.3 Use Case: Product Catalog Browsing
-*Primary Actor:* Shopper  
-*Preconditions:* Shopper is logged in  
+Primary Actor: Shopper  
+Preconditions: Shopper is logged in  
 
-*Main Flow:*
+Main Flow:
 1. Shopper navigates to the product catalog.
 2. Shopper filters products by categories, brand, size, or price range.
 3. System displays the filtered list of products with details (price, description, SKU).
 4. Shopper selects a product to view details.
 
-*Alternative Flow:*
+Alternative Flow:
 - If no products match the filters, the system displays a message indicating no results found.
 
 ## 5.4 Use Case: Shopping Cart Management
-*Primary Actor:* Shopper  
-*Preconditions:* Shopper has at least one product in their cart  
+Primary Actor: Shopper  
+Preconditions: Shopper is logged in.
 
-*Main Flow:*
+Main Flow:
 1. Shopper adds items to the shopping cart.
 2. System updates the cart with the added item.
 3. Shopper views the cart and can modify the quantity or remove items.
 4. Shopper proceeds to checkout.
 
-*Alternative Flow:*
+Alternative Flow:
 - If the shopper tries to remove an item that is not in the cart, the system displays a message stating the item is not in the cart.
 
 ## 5.5 Use Case: Order Placement
-*Primary Actor:* Shopper  
-*Preconditions:* Shopper has items in the cart  
+Primary Actor: Shopper  
+Preconditions: Shopper has items in the cart  
 
-*Main Flow:*
+Main Flow:
 1. Shopper proceeds to checkout.
 2. Shopper reviews the order summary (items, price, shipping).
 3. Shopper enters shipping details.
@@ -230,80 +230,80 @@ The system will integrate with the following external services:
 5. System processes the payment.
 6. System confirms the order and sends an email confirmation to the shopper.
 
-*Alternative Flow:*
+Alternative Flow:
 - If payment fails, the system prompts the shopper to retry or use a different payment method.
 
 ## 5.6 Use Case: Payment Processing
-*Primary Actor:* Shopper  
-*Preconditions:* Shopper has placed an order and provided payment details  
+Primary Actor: Shopper  
+Preconditions: Shopper has placed an order and provided payment details  
 
-*Main Flow:*
+Main Flow:
 1. Shopper selects a payment method (credit card, PayPal, etc.).
 2. Shopper enters payment details (card number, CVV, etc.).
 3. System validates payment details.
 4. System processes the payment with the selected payment gateway.
 5. System confirms payment success and proceeds to order confirmation.
 
-*Alternative Flow:*
+Alternative Flow:
 - If the payment fails, the system prompts the shopper to retry or use a different payment method.
 
 ## 5.7 Use Case: Order Tracking
-*Primary Actor:* Shopper  
-*Preconditions:* Shopper has placed an order  
+Primary Actor: Shopper  
+Preconditions: Shopper has placed an order  
 
-*Main Flow:*
+Main Flow:
 1. Shopper navigates to the order tracking page.
 2. Shopper selects an order to view the status.
 3. System displays the order’s current status (e.g., processing, shipped, delivered).
 4. System provides an estimated delivery time and tracking information (if available).
 
-*Alternative Flow:*
+Alternative Flow:
 - If the order has not shipped yet, the system shows an estimated processing time.
 
 ## 5.8 Use Case: Vendor Login
-*Primary Actor:* Registered Vendor  
-*Preconditions:* Vendor has a verified account  
+Primary Actor: Registered Vendor  
+Preconditions: Vendor has a verified account  
 
-*Main Flow:*
+Main Flow:
 1. Vendor enters email and password.
 2. System validates credentials.
 3. System generates authentication token and logs the vendor in.
 4. Vendor is redirected to the vendor dashboard.
 
-*Alternative Flow:*
+Alternative Flow:
 - If credentials are incorrect, the system prompts the vendor to re-enter the details or reset the password.
 
 ## 5.9 Use Case: Vendor Product Catalog Management
-*Primary Actor:* Vendor  
-*Preconditions:* Vendor is logged in  
+Primary Actor: Vendor  
+Preconditions: Vendor is logged in  
 
-*Main Flow:*
+Main Flow:
 1. Vendor navigates to the product catalog management page.
 2. Vendor adds, updates, or removes products.
 3. Vendor manages product details (name, price, description, quantity).
 4. Vendor saves the changes, and the product catalog is updated.
 
-*Alternative Flow:*
+Alternative Flow:
 - If required fields are missing (e.g., product name or price), the system prompts the vendor to complete the form.
 
 ## 5.10 Use Case: Vendor Order Management
-*Primary Actor:* Vendor  
-*Preconditions:* Vendor is logged in  
+Primary Actor: Vendor  
+Preconditions: Vendor is logged in  
 
-*Main Flow:*
+Main Flow:
 1. Vendor navigates to the order management page.
 2. Vendor reviews orders placed by shoppers.
 3. Vendor can update the order status (e.g., processing, shipped).
 4. Vendor can cancel orders or issue refunds.
 
-*Alternative Flow:*
+Alternative Flow:
 - If the vendor attempts to update an order status that is already completed (e.g., delivered), the system prevents the update and shows an error message.
 
 ## 5.11 Use Case: Admin Registration in App
-*Primary Actor:* Admin  
-*Preconditions:* Admin has valid registration details  
+Primary Actor: Admin  
+Preconditions: Admin has valid registration details  
 
-*Main Flow:*
+Main Flow:
 1. Admin navigates to the registration page.
 2. Admin enters personal details (name, email, password).
 3. System validates input.
@@ -311,34 +311,34 @@ The system will integrate with the following external services:
 5. System sends a verification email.
 6. Admin verifies the email and completes registration.
 
-*Alternative Flow:*
+Alternative Flow:
 - If the input is invalid (e.g., email format is incorrect), the system prompts the admin to correct the input.
 - If email verification fails, the system prompts the admin to resend the verification email.
 
 ## 5.12 Use Case: Admin Login
-*Primary Actor:* Admin  
-*Preconditions:* Admin has a verified account  
+Primary Actor: Admin  
+Preconditions: Admin has a verified account  
 
-*Main Flow:*
+Main Flow:
 1. Admin enters email and password.
 2. System validates credentials.
 3. System generates authentication token and logs the admin in.
 4. Admin is redirected to the admin dashboard.
 
-*Alternative Flow:*
+Alternative Flow:
 - If credentials are incorrect, the system prompts the admin to re-enter the details or reset the password.
 
 ## 5.13 Use Case: Admin Order Management
-*Primary Actor:* Admin  
-*Preconditions:* Admin is logged in  
+Primary Actor: Admin  
+Preconditions: Admin is logged in  
 
-*Main Flow:*
+Main Flow:
 1. Admin navigates to the order management page.
 2. Admin reviews orders placed by shoppers.
 3. Admin can update the order status (e.g., processing, shipped).
 4. Admin can cancel orders or issue refunds.
 
-*Alternative Flow:*
+Alternative Flow:
 - If the admin attempts to update an order status that is already completed (e.g., delivered), the system prevents the update and shows an error message.
 
 ---
@@ -357,7 +357,7 @@ The system will integrate with the following external services:
 - The app and website shall follow WCAG 2.1 accessibility guidelines.
 
 ### 6.4 Scalability
-- The system must support future growth in terms of both user base and product listings without significant performance issues.
+- The system architecture shall support horizontal scaling.
 
 ### 6.5 Reliability
 - The platform must ensure an uptime of 99.9%, with minimal downtime for maintenance.
